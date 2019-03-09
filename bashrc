@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -116,16 +116,21 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias python=python3
-alias antlr4='java -jar /usr/local/lib/antlr-4.7.1-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
-alias image='flatpak run org.gimp.GIMP'
 alias open=xdg-open
-alias term=gnome-terminal
-alias l='ls -1'
-LS_COLORS=$LS_COLORS:'ow=1;34:tw=1;34:' ; export LS_COLORS
-force_color_prompt=yes
+alias vi=vim
+alias v=vim
+alias py=python3
+alias su=sudo
+alias ip3=ipython3
+alias tm=tmux
+alias ta="tmux a -t"
+alias jup="jupyter-lab"
+alias gg="google-chrome"
+alias pep8="watch -n 0.5 pycodestyle --ignore=E501"
+alias wgpu="watch -n 0.5 nvidia-smi"
+alias autopep8="autopep8 --in-place --aggressive --aggressive"
+alias red="sudo redshift -O 4700"
+alias net="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-
-alias note=jupyter-notebook
+# added by Anaconda3 installer
+export PATH="/home/luan/anaconda3/bin:$PATH"
