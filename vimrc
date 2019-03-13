@@ -1,48 +1,33 @@
-set nocompatible              " be iMproved, required
+set nocompatible 
 set number
-filetype off                  " required
+filetype off           
 filetype plugin indent on
-" show existing tab with 4 spaces width
 set tabstop=4
-" " when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" " On pressing tab, insert 4 spaces
-" set expandtab
-
-set incsearch
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'ascenator/L9', {'name': 'newL9'}
 
+" Plugin 'davidhalter/jedi-vim'
+" let g:jedi#auto_vim_configuration = 0
+" let g:jedi#popup_on_dot = 0
+" let g:jedi#popup_select_first = 0
+" let g:jedi#completions_enabled = 0
+" let g:jedi#completions_command = ""
+" let g:jedi#show_call_signatures = "1"
+" let g:jedi#force_py_version = 3
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -53,11 +38,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 set shell=/bin/bash
-
-
 " plugin YCM
 Plugin 'Valloric/YouCompleteMe'
-let g:ycm_global_ycm_extra_conf = '/home/luan/.vim/bundle/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0 
 let g:ycm_enable_diagnostic_highlighting = 0
@@ -76,16 +59,39 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 set completeopt-=preview
-
-Plugin 'dylon/vim-antlr'
-au BufRead,BufNewFile *.g set filetype=antlr3
-au BufRead,BufNewFile *.g4 set filetype=antlr4
-
 let g:syntastic_java_checkers = []
 let g:EclimFileTypeValidate = 0
+let g:ycm_python_binary_path = 'python3'
+" for sidebar
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+"  autocmd VimEnter * :Vexplore
+augroup END
 
-nnoremap j jzz
-nnoremap k kzz
-nnoremap # #zz
-nnoremap * *zz
-nnoremap `` ``zz
+
+
+noremap j jzz
+noremap k kzz
+noremap # #zz
+noremap * *zz
+noremap `` ``zz
+noremap n nzz
+xnoremap y y`]
+xnoremap <C-y> "+y`]
+xnoremap <C-p> "+P`]
+nnoremap <C-p> "+P
+nnoremap <C-c> gg"+yG``
+
+Plugin 'scrooloose/nerdcommenter'
+let g:NERDSpaceDelims = 1
+set hlsearch
+set incsearch
+set linebreak
+
+" for folded highlight
+hi Folded ctermbg=Black

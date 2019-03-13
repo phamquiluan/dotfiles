@@ -87,10 +87,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -116,6 +112,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias l='ls -1'
 alias open=xdg-open
 alias vi=vim
 alias v=vim
@@ -131,6 +128,15 @@ alias wgpu="watch -n 0.5 nvidia-smi"
 alias autopep8="autopep8 --in-place --aggressive --aggressive"
 alias red="sudo redshift -O 4700"
 alias net="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias gitlog="git log --decorate --graph --oneline --all"
+alias ww="watch -n 0.3"
+alias rm="gio trash"
+alias cin="ssh luan@103.45.237.245 -p 30022"
+alias upusen="rsync -azvP -e 'ssh -p 30022' /home/luan/cin/usen/prj_usen luan@103.45.237.245:~/cin/usen"
+alias downusen="rsync -azvP -e 'ssh -p 30022' luan@103.45.237.245:~/cin/usen/prj_usen/debug /home/luan/cin/usen/prj_usen/debug"
 
 # added by Anaconda3 installer
 export PATH="/home/luan/anaconda3/bin:$PATH"
+
+
+
