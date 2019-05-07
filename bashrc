@@ -25,7 +25,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+# shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -76,9 +76,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -115,28 +112,26 @@ fi
 alias l='ls -1'
 alias open=xdg-open
 alias vi=vim
-alias v=vim
 alias py=python3
-alias su=sudo
 alias ip3=ipython3
 alias tm=tmux
 alias ta="tmux a -t"
 alias jup="jupyter-lab"
-alias gg="google-chrome"
-alias pep8="watch -n 0.5 pycodestyle --ignore=E501"
-alias wgpu="watch -n 0.5 nvidia-smi"
+alias pep8="watch -n 0.5 pycodestyle"
+alias wgpu="watch -n 0.5 gpustat"
 alias autopep8="autopep8 --in-place --aggressive --aggressive"
 alias red="sudo redshift -O 4700"
+alias red1="sudo redshift -O 5000"
+alias red2="sudo redshift -O 5500"
+alias red3="sudo redshift -O 6000"
 alias net="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias gitlog="git log --decorate --graph --oneline --all"
 alias ww="watch -n 0.3"
 alias rm="gio trash"
-alias cin="ssh luan@103.45.237.245 -p 30022"
+alias cinsg="ssh luan@103.45.237.245 -p 30022"
+alias cin="ssh -p '22' 'luan@54.169.88.166'"
 alias upusen="rsync -azvP -e 'ssh -p 30022' /home/luan/cin/usen/prj_usen luan@103.45.237.245:~/cin/usen"
 alias downusen="rsync -azvP -e 'ssh -p 30022' luan@103.45.237.245:~/cin/usen/prj_usen/debug /home/luan/cin/usen/prj_usen/debug"
 
 # added by Anaconda3 installer
 export PATH="/home/luan/anaconda3/bin:$PATH"
-
-
-

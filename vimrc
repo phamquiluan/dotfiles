@@ -1,6 +1,7 @@
+syntax on
 set nocompatible 
 set number
-filetype off           
+filetype off
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
@@ -14,16 +15,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'nvie/vim-flake8'
 
-" Plugin 'davidhalter/jedi-vim'
-" let g:jedi#auto_vim_configuration = 0
-" let g:jedi#popup_on_dot = 0
-" let g:jedi#popup_select_first = 0
-" let g:jedi#completions_enabled = 0
-" let g:jedi#completions_command = ""
-" let g:jedi#show_call_signatures = "1"
-" let g:jedi#force_py_version = 3
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -67,12 +61,15 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
-let g:netrw_winsize = 25
+let g:netrw_winsize = 20
+
+let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=1
+
 augroup ProjectDrawer
   autocmd!
 "  autocmd VimEnter * :Vexplore
 augroup END
-
 
 
 noremap j jzz
@@ -95,3 +92,16 @@ set linebreak
 
 " for folded highlight
 hi Folded ctermbg=Black
+
+"if has("autocmd")
+"  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
+"  au InsertEnter,InsertChange *
+"    \ if v:insertmode == 'i' | 
+"    \   silent execute '!echo -ne "\e[5 q"' | redraw! |
+"    \ elseif v:insertmode == 'r' |
+"    \   silent execute '!echo -ne "\e[3 q"' | redraw! |
+"    \ else |
+"    \   silent execute '!echo -ne "\e[1 q"' | redraw! |
+"    \ endif
+"  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+"endif
