@@ -92,6 +92,8 @@ set linebreak
 
 " for folded highlight
 hi Folded ctermbg=Black
+set foldmethod=indent
+set foldlevel=10
 
 "if has("autocmd")
 "  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!

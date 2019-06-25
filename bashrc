@@ -57,16 +57,19 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[01;31m\]\u@z\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@z\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@z: \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -120,18 +123,7 @@ alias jup="jupyter-lab"
 alias pep8="watch -n 0.5 pycodestyle"
 alias wgpu="watch -n 0.5 gpustat"
 alias autopep8="autopep8 --in-place --aggressive --aggressive"
-alias red="sudo redshift -O 4700"
-alias red1="sudo redshift -O 5000"
-alias red2="sudo redshift -O 5500"
-alias red3="sudo redshift -O 6000"
 alias net="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias gitlog="git log --decorate --graph --oneline --all"
 alias ww="watch -n 0.3"
-alias rm="gio trash"
-alias cinsg="ssh luan@103.45.237.245 -p 30022"
 alias cin="ssh -p '22' 'luan@54.169.88.166'"
-alias upusen="rsync -azvP -e 'ssh -p 30022' /home/luan/cin/usen/prj_usen luan@103.45.237.245:~/cin/usen"
-alias downusen="rsync -azvP -e 'ssh -p 30022' luan@103.45.237.245:~/cin/usen/prj_usen/debug /home/luan/cin/usen/prj_usen/debug"
-
-# added by Anaconda3 installer
-export PATH="/home/luan/anaconda3/bin:$PATH"
