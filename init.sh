@@ -19,5 +19,5 @@ do
 	pip install "$line"
 done < "$input"
 echo "********************************"
-echo " 	       Tee is my hero!!		  "
+echo " 	       oɹǝɥ ʎw sı ǝǝʇ		  "
 echo "********************************"
