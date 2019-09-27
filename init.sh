@@ -1,5 +1,8 @@
 #!/bin/sh
 
+wget 'https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh'
+bash Anaconda3-5.3.1-Linux-x86_64.sh
+
 cur_dir="$(pwd)"
 echo "Copying source files..."
 cp bashrc ~/.bashrc
