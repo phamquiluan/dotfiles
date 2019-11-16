@@ -17,6 +17,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'nvie/vim-flake8'
+Plugin 'Chiel92/vim-autoformat'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -53,8 +55,8 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 set completeopt-=preview
-let g:syntastic_java_checkers = []
 let g:EclimFileTypeValidate = 0
+let g:EclimCompletionMethod = 'omnifunc'
 let g:ycm_python_binary_path = 'python3'
 " for sidebar
 let g:netrw_banner = 0
@@ -83,6 +85,7 @@ xnoremap <C-y> "+y`]
 xnoremap <C-p> "+P`]
 nnoremap <C-p> "+P
 nnoremap <C-c> gg"+yG``
+inoremap <C-c> <Esc>
 
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
@@ -107,3 +110,6 @@ set foldlevel=10
 "    \ endif
 "  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 "endif
+"
+autocmd FileType python setlocal indentkeys-=<:>
+autocmd FileType python setlocal indentkeys-=:"
