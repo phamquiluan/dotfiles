@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -126,5 +126,27 @@ alias autopep8="autopep8 --in-place --aggressive --aggressive"
 alias net="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias gitlog="git log --decorate --graph --oneline --all"
 alias ww="watch -n 0.3"
-alias cin="ssh -p 22 luan@52.76.166.40"
-alias list_ext="find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u"
+alias cin="ssh -p 22 luan@52.76.219.73"
+
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/z/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/z/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/z/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/z/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
+
+# added by Anaconda3 installer
+# export PATH="/home/z/anaconda3/bin:$PATH"
+
+
+# NOTE: this command maintain current conda env `conda activate $CONDA_DEFAULT_ENV`
+# . "/home/z/anaconda3/etc/profile.d/conda.sh"
+# conda activate $CONDA_DEFAULT_ENV
