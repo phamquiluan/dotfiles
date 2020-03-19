@@ -6,6 +6,7 @@ bash Anaconda3-5.3.1-Linux-x86_64.sh
 cur_dir="$(pwd)"
 echo "Copying source files..."
 cp bashrc ~/.bashrc
+cp bash_aliases ~/.bash_aliases
 cp vimrc ~/.vimrc
 cp ycm_extra_conf.py ~/.ycm_extra_conf
 
