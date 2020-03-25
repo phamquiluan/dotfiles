@@ -57,11 +57,13 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    # PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='[`date +"%T"`]\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1='[`date +"%T"`]\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1='[`date +"%T"`]\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
+    PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='[`date +"%T"`]\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1='[`date +"%T"`]\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -112,41 +114,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias l='ls -1'
-alias open=xdg-open
-alias vi=vim
-alias py=python
-alias ip3=ipython3
-alias tm=tmux
-alias ta="tmux a -t"
-alias jup="jupyter-lab"
-alias pep8="watch -n 0.5 pycodestyle"
-alias wgpu="watch -n 0.5 gpustat"
-alias autopep8="autopep8 --in-place --aggressive --aggressive"
-alias net="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
-alias gitlog="git log --decorate --graph --oneline --all"
-alias ww="watch -n 0.3"
-alias cin="ssh -p 22 luan@52.76.219.73"
-
-# # >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/z/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/z/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/z/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/z/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# # <<< conda initialize <<<
+. "/home/z/anaconda3/etc/profile.d/conda.sh"
+conda activate $CONDA_DEFAULT_ENV
 
 # added by Anaconda3 installer
 # export PATH="/home/z/anaconda3/bin:$PATH"
 
-
-# NOTE: this command maintain current conda env `conda activate $CONDA_DEFAULT_ENV`
-# . "/home/z/anaconda3/etc/profile.d/conda.sh"
-# conda activate $CONDA_DEFAULT_ENV
