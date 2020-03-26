@@ -1,6 +1,7 @@
 syntax on
 set nocompatible 
 set number
+set wildmenu
 filetype off
 filetype plugin indent on
 set tabstop=4
