@@ -15,5 +15,6 @@ alias awslog="aws logs get-log-events --log-group-name /aws/sagemaker/TrainingJo
 # for git
 alias gs="git status"
 alias gd="git diff"
+alias gb="git branch -a"
 alias gl="git log --decorate --graph --oneline --all"
 alias gitlog="git log --decorate --graph --oneline --all"
