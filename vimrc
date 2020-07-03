@@ -19,6 +19,7 @@ Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'nvie/vim-flake8'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'ekalinin/dockerfile.vim'
 
 
 call vundle#end()            " required
@@ -114,3 +115,4 @@ set foldlevel=10
 "
 autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
+autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
