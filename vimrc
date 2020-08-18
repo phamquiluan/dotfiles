@@ -67,7 +67,9 @@ let g:ycm_python_binary_path = 'python3'
 let g:netrw_banner = 0
 let g:netrw_liststyle = 0
 let g:netrw_altv = 1
-let g:netrw_winsize = 20
+let g:netrw_winsize = 80
+let g:netrw_browse_split = 2
+
 
 let vim_markdown_preview_github=1
 let vim_markdown_preview_toggle=1
