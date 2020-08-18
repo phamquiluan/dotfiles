@@ -16,12 +16,4 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer
 
-cd $cur_dir
-input='requirements.txt'
-while IFS= read -r line
-do
-	pip install "$line"
-done < "$input"
-echo "********************************"
-echo " 	       oɹǝɥ ʎw sı ǝǝʇ		  "
-echo "********************************"
+echo "==== DONE ===="
