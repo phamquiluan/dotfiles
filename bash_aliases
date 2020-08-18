@@ -16,3 +16,6 @@ alias gd="git diff"
 alias gb="git branch -a"
 alias gl="git log --decorate --graph --oneline --all"
 alias gitlog="git log --decorate --graph --oneline --all"
+
+# for conda
+alias ca="conda activate"
