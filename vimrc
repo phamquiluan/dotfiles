@@ -6,6 +6,7 @@ filetype off
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -20,7 +21,7 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'nvie/vim-flake8'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'ekalinin/dockerfile.vim'
-
+Plugin 'pythoncompletion.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -60,10 +61,11 @@ set completeopt-=preview
 let g:EclimFileTypeValidate = 0
 let g:EclimCompletionMethod = 'omnifunc'
 let g:ycm_python_binary_path = 'python3'
+
+
 " for sidebar
 let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
+let g:netrw_liststyle = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 20
 
