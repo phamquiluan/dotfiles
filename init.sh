@@ -16,4 +16,8 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer
 
+echo "copy vim template"
+cp -r templates ~/.vim/templates
+
+
 echo "==== DONE ===="
