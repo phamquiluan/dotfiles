@@ -21,7 +21,8 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'nvie/vim-flake8'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'ekalinin/dockerfile.vim'
-Plugin 'pythoncompletion.vim'
+" Plugin 'pythoncompletion.vim'
+Plugin 'tibabit/vim-templates'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,9 +71,12 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 80
 let g:netrw_browse_split = 2
 
-
+" for markdown
 let vim_markdown_preview_github=1
 let vim_markdown_preview_toggle=1
+
+" for template
+let g:tmpl_search_paths = ["~/.vim/templates"]
 
 augroup ProjectDrawer
   autocmd!
