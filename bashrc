@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
 fi
 
 #. "/home/z/anaconda3/etc/profile.d/conda.sh"
-. "$PWD/anaconda3/etc/profile.d/conda.sh"
+. "$HOME/anaconda3/etc/profile.d/conda.sh"
 conda activate $CONDA_DEFAULT_ENV
 
 # added by Anaconda3 installer
