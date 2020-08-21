@@ -114,10 +114,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#. "/home/z/anaconda3/etc/profile.d/conda.sh"
+
+if [ "x" != "x$DISPLAY" ]; then
+    # xmodmap -e "remove lock = Caps_Lock"
+    xmodmap -e "keycode 66 = Escape"
+fi
+
+
 . "$HOME/anaconda3/etc/profile.d/conda.sh"
 conda activate $CONDA_DEFAULT_ENV
-
-# added by Anaconda3 installer
-# export PATH="/home/z/anaconda3/bin:$PATH"
-
