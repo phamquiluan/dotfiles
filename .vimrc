@@ -3,12 +3,13 @@ set nocompatible
 set number
 set wildmenu
 filetype off
-filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
+
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
@@ -21,8 +22,9 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'nvie/vim-flake8'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'ekalinin/dockerfile.vim'
-" Plugin 'pythoncompletion.vim'
 Plugin 'tibabit/vim-templates'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'jremmen/vim-ripgrep'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,8 +40,8 @@ filetype plugin on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 set shell=/bin/bash
+
 " plugin YCM
-Plugin 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0 
