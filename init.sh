@@ -3,7 +3,14 @@
 wget 'https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh'
 bash Anaconda3-5.3.1-Linux-x86_64.sh
 
+
 cur_dir="$(pwd)"
+
+
+echo "Install fzf"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+bash ~/.fzf/install
+
 echo "Copying source files..."
 cp .bashrc ~/.bashrc
 cp .bash_aliases ~/.bash_aliases
@@ -20,6 +27,8 @@ python3 install.py --clang-completer
 cd $cur_dir
 echo "copy vim template"
 cp -r templates ~/.vim/templates
+
+
 
 
 echo "==== DONE ===="
