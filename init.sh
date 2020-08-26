@@ -16,6 +16,7 @@ cp .bashrc ~/.bashrc
 cp .bash_aliases ~/.bash_aliases
 cp .vimrc ~/.vimrc
 cp .ycm_extra_conf.py ~/.ycm_extra_conf
+cp .inputrc ~/.inputrc
 
 echo "Setup Vim, YouCompleteMe"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
