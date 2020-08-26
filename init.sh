@@ -6,10 +6,7 @@ bash Anaconda3-5.3.1-Linux-x86_64.sh
 
 cur_dir="$(pwd)"
 
-
-echo "Install fzf"
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-bash ~/.fzf/install
+sudo apt install build-essential cmake vim
 
 echo "Copying source files..."
 cp .bashrc ~/.bashrc
@@ -29,6 +26,9 @@ echo "copy vim template"
 cp -r templates ~/.vim/templates
 
 
+echo "Install fzf"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+bash ~/.fzf/install
 
 
 echo "==== DONE ===="
