@@ -1,7 +1,10 @@
 #!/bin/sh
 
-wget 'https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh'
-bash Anaconda3-5.3.1-Linux-x86_64.sh
+if [ ! $CONDA_DEFAULT_ENV ];
+then
+	wget 'https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh'
+	bash Anaconda3-5.3.1-Linux-x86_64.sh
+fi
 
 
 cur_dir="$(pwd)"
