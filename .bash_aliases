@@ -1,9 +1,10 @@
-alias l='ls -1'
-alias open=xdg-open
-alias vi=vim
-alias py=python
+alias l="ls -1"
+alias cl="clear"
+alias open="xdg-open"
+alias vi="vim"
+alias py="python"
 alias i="ipython3 --TerminalInteractiveShell.editing_mode=vi"
-alias tm=tmux
+alias tm="tmux"
 alias ta="tmux a -t"
 alias jup="jupyter-lab"
 alias pep8="watch -n 0.5 pycodestyle"
