@@ -25,6 +25,7 @@ Plugin 'ekalinin/dockerfile.vim'
 Plugin 'tibabit/vim-templates'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jremmen/vim-ripgrep'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -46,6 +47,7 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0 
 let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_auto_hover=""  " this guys is being default at April :))
 let g:ycm_complete_in_comments = 1
 let g:ycm_semantic_triggers =  {
   \   'c' : ['->', '.'],
@@ -80,6 +82,14 @@ let vim_markdown_preview_toggle=1
 " for template
 let g:tmpl_search_paths = ["~/.vim/templates"]
 
+
+" for fzf
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = ''
+
+" Always enable preview window on the right with 60% width
+let g:fzf_preview_window = 'right:60%'
+
 augroup ProjectDrawer
   autocmd!
 "  autocmd VimEnter * :Vexplore
@@ -102,7 +112,6 @@ inoremap <C-c> <Esc>
 nnoremap <C-g> :Rg<Cr>
 
 
-Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 set hlsearch
 set incsearch
