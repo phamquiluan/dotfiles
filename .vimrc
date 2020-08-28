@@ -99,6 +99,9 @@ nnoremap <C-p> "+P
 nnoremap <C-c> gg"+yG``
 inoremap <C-c> <Esc>
 
+nnoremap <C-g> :Rg<Cr>
+
+
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 set hlsearch
