@@ -107,9 +107,14 @@ xnoremap <C-y> "+y`]
 xnoremap <C-p> "+P`]
 nnoremap <C-p> "+P
 nnoremap <C-c> gg"+yG``
-inoremap <C-c> <Esc>
+inoremap <C-c> <esc>
 
-nnoremap <C-g> :Rg<Cr>
+if $TERM =~ 'xterm'
+  set noek
+endif
+
+nnoremap <esc> :noh<Cr><esc>
+nnoremap <esc>^[ <esc>^[
 
 
 let g:NERDSpaceDelims = 1
@@ -121,6 +126,10 @@ set linebreak
 hi Folded ctermbg=Black
 set foldmethod=indent
 set foldlevel=10
+
+" for vimdiff
+hi DiffText   cterm=none ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
+hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black guibg=LightMagenta
 
 "if has("autocmd")
 "  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
@@ -138,3 +147,7 @@ set foldlevel=10
 autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
 autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
+
+" ref: https://stackoverflow.com/questions/62148994/strange-character-since-last-update-42m-in-vim
+let &t_TI = ""
+let &t_TE = ""
