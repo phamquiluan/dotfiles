@@ -119,5 +119,10 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
-. "$HOME/anaconda3/etc/profile.d/conda.sh"
+if [ -d "$HOME/anaconda3" ]; then
+	. "$HOME/anaconda3/etc/profile.d/conda.sh"
+elif [ -d "$HOME/miniconda3" ]; then
+	. "$HOME/miniconda3/etc/profile.d/conda.sh"
+fi
+
 conda activate $CONDA_DEFAULT_ENV
