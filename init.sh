@@ -12,7 +12,7 @@ else
 	echo "Conda is found!!!"
 fi
 
-
+ 
 CUR_DIR="$(pwd)"
 
 YUM_CMD=$(which yum)
@@ -27,7 +27,7 @@ elif [ ! -z $YUM_CMD ]; then
 	sudo yum update -y
 	sudo yum install -y build-essential cmake vim-gtk
 else
-	echo "NOT SUPPORT"
+	echo "NOT SUPPORT :))"
 	exit 1
 fi
 
