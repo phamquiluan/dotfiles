@@ -13,7 +13,7 @@ fi
 cur_dir="$(pwd)"
 
 echo "===== Installing build-essential cmake vim.. ====="
-if [ command -v apt &> /dev/null ];
+if [ ! command -v apt &> /dev/null ];
 then 
 	sudo add-apt-repository ppa:jonathonf/vim
 	sudo apt update -y	
