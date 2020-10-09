@@ -1,16 +1,25 @@
 #!/bin/sh
 
+
 if [ ! command -v conda &> /dev/null ];
 then
-	echo "Conda could not be found! Start installing.."
+	echo "Conda could not be found! Installing conda.."
 	wget "https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh"
 	bash Anaconda3-5.3.1-Linux-x86_64.sh
+else
+	echo "Conda is found!!!"
 fi
 
 
 cur_dir="$(pwd)"
 
-sudo apt install build-essential cmake vim
+echo "=== Installing build-essential cmake vim.. ==="
+if [ command -v apt %> /dev/null ];
+then 
+	sudo apt install -y build-essential cmake vim
+else
+	sudo yum install -y build-essential cmake vim
+fi
 
 echo "Copying source files..."
 cp .bashrc ~/.bashrc
