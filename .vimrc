@@ -6,18 +6,25 @@ filetype off
 set tabstop=4
 set shiftwidth=4
 
+
 " using system clipboard
 set clipboard=unnamedplus
 
-" set the runtime path to include Vundle and initialize
+
+" mapleader
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+
+
+" set the runtime path to include Vundle and fzf
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
 
+
+" for plugin
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
@@ -29,11 +36,13 @@ Plugin 'tibabit/vim-templates'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdcommenter'
-
 call vundle#end()            " required
+
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 filetype plugin on
+
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -43,7 +52,26 @@ filetype plugin on
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+
 set shell=/bin/bash
+
+
+" plugin vim-fugitive
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Git diff<CR>
+nnoremap <leader>gj :diffget //3<CR>
+nnoremap <leader>gh :diffget //2<CR>
+nnoremap <leader>gl :!git log --decorate --graph --oneline --all<CR>
+
+
+" vsplit
+nnoremap <leader>v :vsplit<CR>
+
+
+" for fzf
+nnoremap f :FZF<CR>
+
 
 " plugin YCM
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
@@ -89,9 +117,10 @@ let g:tmpl_search_paths = ["~/.vim/templates"]
 " for fzf
 " Empty value to disable preview window altogether
 let g:fzf_preview_window = ''
-
 " Always enable preview window on the right with 60% width
 let g:fzf_preview_window = 'right:60%'
+
+
 
 augroup ProjectDrawer
   autocmd!
@@ -134,19 +163,6 @@ set foldlevel=10
 hi DiffText   cterm=none ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
 hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black guibg=LightMagenta
 
-"if has("autocmd")
-"  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
-"  au InsertEnter,InsertChange *
-"    \ if v:insertmode == 'i' | 
-"    \   silent execute '!echo -ne "\e[5 q"' | redraw! |
-"    \ elseif v:insertmode == 'r' |
-"    \   silent execute '!echo -ne "\e[3 q"' | redraw! |
-"    \ else |
-"    \   silent execute '!echo -ne "\e[1 q"' | redraw! |
-"    \ endif
-"  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-"endif
-"
 autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
 autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
