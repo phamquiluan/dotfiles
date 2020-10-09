@@ -1,8 +1,9 @@
 #!/bin/sh
 
-if [ ! $CONDA_DEFAULT_ENV ];
+if [ ! command -v conda &> /dev/null ];
 then
-	wget 'https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh'
+	echo "Conda could not be found! Start installing.."
+	wget "https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh"
 	bash Anaconda3-5.3.1-Linux-x86_64.sh
 fi
 
