@@ -25,7 +25,7 @@ elif [ ! -z $YUM_CMD ]; then
 	sudo yum install -y build-essential cmake vim-gtk
 else
 	echo "NOT SUPPORT"
-	exit(1)
+	exit 1
 fi
 
 echo "===== Copying config files.. ====="
