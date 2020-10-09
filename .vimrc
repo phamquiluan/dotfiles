@@ -16,7 +16,6 @@ nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 
-
 " set the runtime path to include Vundle and fzf
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
@@ -61,11 +60,13 @@ set shell=/bin/bash
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpush<CR>
-nnoremap <leader>gd :Git diff<CR>
+nnoremap <leader>gd :Git diff HEAD<CR>
+nnoremap <leader>gb :Git branch -a<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gj :diffget //3<CR>
 nnoremap <leader>gh :diffget //2<CR>
-nnoremap <leader>gl :!git log --decorate --graph --oneline --all<CR>
+" nnoremap <leader>gl :!git log --decorate --graph --oneline --all<CR>
+nnoremap <leader>gl :Git log --decorate --graph --oneline --all<CR>
 
 
 " vsplit
