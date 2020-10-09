@@ -14,7 +14,7 @@ fi
 cur_dir="$(pwd)"
 
 echo "=== Installing build-essential cmake vim.. ==="
-if [ command -v apt %> /dev/null ];
+if [ command -v apt &> /dev/null ];
 then 
 	sudo apt install -y build-essential cmake vim
 else
