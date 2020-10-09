@@ -17,7 +17,7 @@ APT_CMD=$(which apt)
 
 echo "===== Installing build-essential cmake vim.. ====="
 if [ ! -z $APT_CMD ]; then 
-	sudo add-apt-repository ppa:jonathonf/vim
+	sudo add-apt-repository ppa:jonathonf/vim -y
 	sudo apt update -y	
 	sudo apt install -y build-essential cmake vim-gtk
 elif [ ! -z $YUM_CMD ]; then
