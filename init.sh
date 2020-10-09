@@ -5,7 +5,7 @@ if [ ! command -v conda &> /dev/null ];
 then
 	echo "Conda could not be found! Installing conda.."
 	wget "https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh"
-	bash Anaconda3-5.3.1-Linux-x86_64.sh
+	bash Anaconda3-5.3.1-Linux-x86_64.sh -b -p $HOME/anaconda3
 else
 	echo "Conda is found!!!"
 fi
