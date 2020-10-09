@@ -1,11 +1,13 @@
 #!/bin/sh
 
 
-if [ ! -d $HOME/anaconda3 ];
+if [ ! -d "$HOME/anaconda3" ] || [ ! -d "$HOME/miniconda3" ] ;
 then
 	echo "Conda could not be found! Installing conda.."
-	wget "https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh"
-	bash Anaconda3-5.3.1-Linux-x86_64.sh -b -p $HOME/anaconda3
+	# wget "https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh"
+	wget "https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.3-Linux-x86_64.sh"
+	bash Miniconda3-py37_4.8.3-Linux-x86_64.sh -b -p "$HOME/miniconda3"
+	# bash Anaconda3-5.3.1-Linux-x86_64.sh -b -p $HOME/anaconda3
 else
 	echo "Conda is found!!!"
 fi
@@ -43,7 +45,7 @@ cp -r templates ~/.vim/templates
 
 echo "Install fzf"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-bash ~/.fzf/install
+bash ~/.fzf/install --all
 
 
 echo "==== DONE ===="
