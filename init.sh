@@ -10,17 +10,22 @@ else
 fi
 
 
-cur_dir="$(pwd)"
+CUR_DIR="$(pwd)"
+
+YUM_CMD=$(which yum)
+APT_CMD=$(which apt)
 
 echo "===== Installing build-essential cmake vim.. ====="
-if [ ! command -v apt &> /dev/null ];
-then 
+if [ ! -z $APT_CMD ]; then 
 	sudo add-apt-repository ppa:jonathonf/vim
 	sudo apt update -y	
 	sudo apt install -y build-essential cmake vim-gtk
-else
+elif [ ! -z $YUM_CMD ]; then
 	sudo yum update -y
 	sudo yum install -y build-essential cmake vim-gtk
+else
+	echo "NOT SUPPORT"
+	exit(1)
 fi
 
 echo "===== Copying config files.. ====="
@@ -38,7 +43,7 @@ cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-completer
 
 
-cd $cur_dir
+cd $CUR_DIR
 echo "===== Copy vim template ====="
 cp -r templates ~/.vim/templates
 
