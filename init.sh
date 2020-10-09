@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-if [ ! command -v conda &> /dev/null ];
+if [ ! -d $HOME/anaconda3 ];
 then
 	echo "Conda could not be found! Installing conda.."
 	wget "https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh"
