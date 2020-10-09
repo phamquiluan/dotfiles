@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 if [ ! -d "$HOME/anaconda3" ] || [ ! -d "$HOME/miniconda3" ] ;
 then
 	echo "Conda could not be found! Installing conda.."
@@ -18,9 +17,11 @@ cur_dir="$(pwd)"
 echo "=== Installing build-essential cmake vim.. ==="
 if [ command -v apt &> /dev/null ];
 then 
-	sudo apt install -y build-essential cmake vim
+	sudo apt update -y	
+	sudo apt install -y build-essential cmake vim-gtk
 else
-	sudo yum install -y build-essential cmake vim
+	sudo yum update -y
+	sudo yum install -y build-essential cmake vim-gtk
 fi
 
 echo "Copying source files..."
