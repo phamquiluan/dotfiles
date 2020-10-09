@@ -1,7 +1,6 @@
 #!/bin/sh
 
-if [ ! -d "$HOME/anaconda3" ] || [ ! -d "$HOME/miniconda3" ] ;
-then
+if [ ! -d "$HOME/anaconda3" ] && [ ! -d "$HOME/miniconda3" ] ; then
 	echo "Conda could not be found! Installing conda.."
 	wget "https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.3-Linux-x86_64.sh"
 	bash Miniconda3-py37_4.8.3-Linux-x86_64.sh -b -p "$HOME/miniconda3"
