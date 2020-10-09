@@ -59,7 +59,10 @@ set shell=/bin/bash
 
 " plugin vim-fugitive
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gd :Git diff<CR>
+nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gj :diffget //3<CR>
 nnoremap <leader>gh :diffget //2<CR>
 nnoremap <leader>gl :!git log --decorate --graph --oneline --all<CR>
