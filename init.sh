@@ -19,13 +19,13 @@ YUM_CMD=$(which yum)
 APT_CMD=$(which apt)
 
 echo "\n===== Installing build-essential cmake vim.. ====="
-if [ ! -z $APT_CMD ]; then 
+if [ ! -z $YUM_CMD ]; then
+	sudo yum update -y
+	sudo yum install -y build-essential cmake vim-gtk
+elif [ ! -z $APT_CMD ]; then 
 	sudo add-apt-repository ppa:jonathonf/vim -y
 	sudo apt update -y && sudo apt upgrade -y
 	sudo apt install -y build-essential cmake vim-gtk
-elif [ ! -z $YUM_CMD ]; then
-	sudo yum update -y
-	sudo yum install -y build-essential cmake vim-gtk
 else
 	echo "\nNOT SUPPORT :))"
 	exit 1
