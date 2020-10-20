@@ -35,6 +35,8 @@ Plugin 'tibabit/vim-templates'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'christoomey/vim-tmux-navigator'
+
 call vundle#end()            " required
 
 
@@ -75,6 +77,10 @@ nnoremap <leader>v :vsplit<CR>
 
 " for fzf
 nnoremap f :FZF<CR>
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = ''
+" Always enable preview window on the right with 60% width
+let g:fzf_preview_window = 'right:60%'
 
 
 " plugin YCM
@@ -118,11 +124,19 @@ let vim_markdown_preview_toggle=1
 let g:tmpl_search_paths = ["~/.vim/templates"]
 
 
-" for fzf
-" Empty value to disable preview window altogether
-let g:fzf_preview_window = ''
-" Always enable preview window on the right with 60% width
-let g:fzf_preview_window = 'right:60%'
+" for seamlessly navigate vim splits and tmux panes
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+if &term == "screen-256color"
+    let g:tmux_navigator_no_mappings = 1
+    nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+    nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+    nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+    nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+endif
 
 
 
