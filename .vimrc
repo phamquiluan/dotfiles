@@ -102,6 +102,7 @@ let g:ycm_semantic_triggers =  {
   \   'ruby' : ['.', '::'],
   \   'lua' : ['.', ':'],
   \   'erlang' : [':'],
+  \   'python' : ['re!\w{2}'],
   \ }
 set completeopt-=preview
 let g:EclimFileTypeValidate = 0
