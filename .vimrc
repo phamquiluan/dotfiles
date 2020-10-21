@@ -83,7 +83,7 @@ let g:fzf_preview_window = ''
 let g:fzf_preview_window = 'right:60%'
 
 
-" plugin YCM
+" plugin YCM, Youcompleteme
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0 
@@ -108,7 +108,8 @@ set completeopt-=preview
 let g:EclimFileTypeValidate = 0
 let g:EclimCompletionMethod = 'omnifunc'
 let g:ycm_python_binary_path = 'python3'
-
+let g:ycm_key_invoke_completion = '<C-n>'
+let g:ycm_disable_for_files_larger_than_kb = 2000
 
 " for sidebar
 let g:netrw_banner = 0
