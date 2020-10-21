@@ -146,7 +146,7 @@ augroup END
 
 
 " keep it always centered
-set so=999
+" set so=999
 noremap j jzz
 noremap k kzz
 noremap # #zz
