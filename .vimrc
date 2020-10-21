@@ -36,6 +36,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            " required
 
