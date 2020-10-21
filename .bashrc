@@ -115,8 +115,8 @@ if ! shopt -oq posix; then
 fi
 
 
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
 
 
 if [ -d "$HOME/anaconda3" ]; then

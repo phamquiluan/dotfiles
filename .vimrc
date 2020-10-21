@@ -130,30 +130,22 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-if &term == "screen-256color"
-    let g:tmux_navigator_no_mappings = 1
-    nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
-    nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
-    nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
-    nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
-endif
-
+" if &term == "screen-256color"
+"     let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+" endif
 
 
 augroup ProjectDrawer
   autocmd!
-"  autocmd VimEnter * :Vexplore
 augroup END
 
 
 
 set so=999
-" noremap j jzz
-" noremap k kzz
-" noremap # #zz
-" noremap * *zz
-" noremap `` ``zz
-" noremap n nzz
 xnoremap y y`]
 xnoremap <C-y> "+y`]
 xnoremap <C-p> "+P`]
