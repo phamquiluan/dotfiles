@@ -145,7 +145,15 @@ augroup END
 
 
 
+" keep it always centered
 set so=999
+noremap j jzz
+noremap k kzz
+noremap # #zz
+noremap * *zz
+noremap `` ``zz
+noremap n nzz
+
 xnoremap y y`]
 xnoremap <C-y> "+y`]
 xnoremap <C-p> "+P`]
