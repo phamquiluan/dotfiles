@@ -24,9 +24,11 @@ printf "\n===== Installing build-essential cmake vim.. ====="
 # 	sudo yum install -y build-essential cmake vim-gtk
 # elif [ ! -z $APT_CMD ]; then 
 if [ ! -z $APT_CMD ]; then 
+	sudo apt update -y && sudo apt upgrade -y
 	sudo add-apt-repository ppa:jonathonf/vim -y
 	sudo apt update -y && sudo apt upgrade -y
-	sudo apt install -y build-essential cmake vim-gtk
+	sudo apt install -y build-essential cmake
+	sudo apt install -y vim-gtk
 else
 	printf "\nNOT SUPPORT :))"
 	exit 1
