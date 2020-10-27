@@ -37,6 +37,8 @@ Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'Vimjas/vim-python-pep8-indent'
+
 
 call vundle#end()            " required
 
