@@ -38,8 +38,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Vimjas/vim-python-pep8-indent'
-
-
+Plugin 'preservim/nerdtree'
 call vundle#end()            " required
 
 
@@ -79,11 +78,18 @@ nnoremap <leader>v :vsplit<CR>
 
 
 " for fzf
-nnoremap f :FZF<CR>
+nnoremap <leader>f :FZF<CR>
+nnoremap <C-f> :Rg
 " Empty value to disable preview window altogether
 let g:fzf_preview_window = ''
 " Always enable preview window on the right with 60% width
 let g:fzf_preview_window = 'right:60%'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+
+
+" for NERDTree
+let NERDTreeIgnore = ["__pycache__"]
+nmap <C-n> :NERDTreeToggle<CR>
 
 
 " plugin YCM, Youcompleteme
@@ -111,8 +117,9 @@ set completeopt-=preview
 let g:EclimFileTypeValidate = 0
 let g:EclimCompletionMethod = 'omnifunc'
 let g:ycm_python_binary_path = 'python3'
-let g:ycm_key_invoke_completion = '<C-n>'
+" let g:ycm_key_invoke_completion = '<C-n>'
 let g:ycm_disable_for_files_larger_than_kb = 2000
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
 " for sidebar
 let g:netrw_banner = 0
