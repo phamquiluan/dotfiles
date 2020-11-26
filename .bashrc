@@ -119,10 +119,13 @@ fi
 export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
 
 
-if [ -d "$HOME/anaconda3" ]; then
-	. "$HOME/anaconda3/etc/profile.d/conda.sh"
-elif [ -d "$HOME/miniconda3" ]; then
-	. "$HOME/miniconda3/etc/profile.d/conda.sh"
-fi
+# if [ -d "$HOME/anaconda3" ]; then
+# 	. "$HOME/anaconda3/etc/profile.d/conda.sh"
+# elif [ -d "$HOME/miniconda3" ]; then
+# 	. "$HOME/miniconda3/etc/profile.d/conda.sh"
+# fi
 
-conda activate $CONDA_DEFAULT_ENV
+# conda activate $CONDA_DEFAULT_ENV
+if [ -f env/bin/activate ]; then
+	source env/bin/activate
+fi
