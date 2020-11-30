@@ -129,3 +129,6 @@ export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
 if [ -f env/bin/activate ]; then
 	source env/bin/activate
 fi
+
+
+bind '"\C-p": previous-history'
