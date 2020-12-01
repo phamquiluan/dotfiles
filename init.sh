@@ -1,18 +1,5 @@
 #!/bin/sh
 
-if [ ! -d "$HOME/anaconda3" ] && [ ! -d "$HOME/miniconda3" ] ; then
-	printf "===== Conda is not exists! Installing conda.. ====="
-	wget "https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.3-Linux-x86_64.sh"
-	bash Miniconda3-py37_4.8.3-Linux-x86_64.sh -b -p "$HOME/miniconda3"
-
-	# activate conda ....
-	. "$HOME/miniconda3/etc/profile.d/conda.sh"
-	conda activate $CONDA_DEFAULT_ENV
-else
-	printf "===== Conda exists!!! ====="
-fi
-
- 
 CUR_DIR="$(pwd)"
 
 # YUM_CMD=$(which yum)
