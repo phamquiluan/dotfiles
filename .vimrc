@@ -73,9 +73,9 @@ nnoremap <leader>gh :diffget //2<CR>
 nnoremap <leader>gl :Git log --decorate --graph --oneline --all<CR>
 
 
-nnoremap <leader>0 :set foldlevel=0<CR>
-nnoremap <leader>1 :set foldlevel=1<CR>
-nnoremap <leader>2 :set foldlevel=2<CR>
+nnoremap <leader>1 :set foldlevel=0<CR>
+nnoremap <leader>2 :set foldlevel=1<CR>
+nnoremap <leader>3 :set foldlevel=2<CR>
 
 
 " vsplit
