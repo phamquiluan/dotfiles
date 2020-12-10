@@ -76,6 +76,12 @@ nnoremap <leader>gl :Git log --decorate --graph --oneline --all<CR>
 nnoremap <leader>1 :set foldlevel=0<CR>
 nnoremap <leader>2 :set foldlevel=1<CR>
 nnoremap <leader>3 :set foldlevel=2<CR>
+nnoremap <leader>4 :set foldlevel=3<CR>
+nnoremap <leader>5 :set foldlevel=4<CR>
+nnoremap <leader>6 :set foldlevel=5<CR>
+nnoremap <leader>7 :set foldlevel=6<CR>
+nnoremap <leader>8 :set foldlevel=7<CR>
+
 
 
 " vsplit
