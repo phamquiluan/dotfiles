@@ -104,7 +104,7 @@ set completeopt-=preview
 let g:ycm_python_binary_path = 'python3'
 let g:ycm_disable_for_files_larger_than_kb = 2000
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
-nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration
+nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " for netrw sidebar
 let g:netrw_banner = 0
