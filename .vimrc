@@ -73,6 +73,7 @@ nnoremap <leader>8 :set foldlevel=7<CR>
 
 nnoremap <C-f> :Rg
 nnoremap <leader>v :vsplit<CR>
+nnoremap ? :YcmCompleter GetDoc<CR>
 
 " for fzf
 nnoremap <leader>f :FZF<CR>
@@ -162,3 +163,15 @@ autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
 " ref: https://stackoverflow.com/questions/62148994/strange-character-since-last-update-42m-in-vim
 let &t_TI = ""
 let &t_TE = ""
+
+pyx << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+	# execfile(activate_this, dict(__file__=activate_this))
+    exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__file__=activate_this))
+EOF
