@@ -3,6 +3,7 @@ syntax on
 set nocompatible 
 set number
 set wildmenu
+set mouse=a
 filetype off
 set tabstop=4
 set shiftwidth=4
@@ -77,9 +78,9 @@ nnoremap ? :YcmCompleter GetDoc<CR>
 
 " for fzf
 nnoremap <leader>f :FZF<CR>
-let g:fzf_preview_window = ''
-let g:fzf_preview_window = 'right:60%'
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+let g:fzf_preview_window = ""
+let g:fzf_preview_window = "right:60%"
+let $FZF_DEFAULT_COMMAND = "rg --files --hidden"
 
 " for NERDTree
 let NERDTreeIgnore = ["__pycache__"]
@@ -88,23 +89,23 @@ let g:NERDSpaceDelims = 1
 
 
 " plugin YCM, Youcompleteme
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0 
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_auto_hover=""  " this guys is being default at April :))
 let g:ycm_complete_in_comments = 1
 let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.'],
-  \   'cpp,cuda,objcpp' : ['->', '.', '::'],
-  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.', 're!\w{2}'],
+  \   "c" : ["->", "."],
+  \   "cpp,cuda,objcpp" : ["->", ".", "::"],
+  \   "cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go" : [".", "re!\w{2}"],
   \ }
 set completeopt-=preview
 " let g:EclimFileTypeValidate = 0
-" let g:EclimCompletionMethod = 'omnifunc'
-let g:ycm_python_binary_path = 'python3'
+" let g:EclimCompletionMethod = "omnifunc"
+let g:ycm_python_binary_path = "python3"
 let g:ycm_disable_for_files_larger_than_kb = 2000
-let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+let g:ycm_key_list_stop_completion = ["<C-y>", "<CR>"]
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " for netrw sidebar
@@ -144,7 +145,7 @@ nnoremap <C-p> "+P
 nnoremap <C-c> gg"+yG``
 inoremap <C-c> <esc>
 
-if $TERM =~ 'xterm'
+if $TERM =~ "xterm"
   set noek
 endif
 
@@ -168,10 +169,10 @@ pyx << EOF
 import os.path
 import sys
 import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
+if "VIRTUAL_ENV" in os.environ:
+    project_base_dir = os.environ["VIRTUAL_ENV"]
     sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    activate_this = os.path.join(project_base_dir, "bin/activate_this.py")
 	# execfile(activate_this, dict(__file__=activate_this))
-    exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__file__=activate_this))
+    exec(compile(open(activate_this, "rb").read(), activate_this, "exec"), dict(__file__=activate_this))
 EOF
