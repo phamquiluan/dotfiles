@@ -38,11 +38,11 @@ Plugin 'nvie/vim-flake8'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'tibabit/vim-templates'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'jiangmiao/auto-pairs'
+" Plugin 'jiangmiao/auto-pairs'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'preservim/nerdtree'
 call vundle#end()
@@ -74,7 +74,9 @@ nnoremap <leader>8 :set foldlevel=7<CR>
 
 nnoremap <C-f> :Rg
 nnoremap <leader>v :vsplit<CR>
+
 nnoremap ? :YcmCompleter GetDoc<CR>
+nnoremap gt :YcmCompleter GetType<CR>
 
 " for fzf
 nnoremap <leader>f :FZF<CR>
@@ -99,6 +101,7 @@ let g:ycm_semantic_triggers =  {
   \   "c" : ["->", "."],
   \   "cpp,cuda,objcpp" : ["->", ".", "::"],
   \   "cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go" : [".", "re!\w{2}"],
+  \   "python" : [".", "re!\w{2}"],
   \ }
 set completeopt-=preview
 " let g:EclimFileTypeValidate = 0
@@ -106,6 +109,7 @@ set completeopt-=preview
 let g:ycm_python_binary_path = "python3"
 let g:ycm_disable_for_files_larger_than_kb = 2000
 let g:ycm_key_list_stop_completion = ["<C-y>", "<CR>"]
+let g:ycm_key_invoke_completion = "<C-j>"
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " for netrw sidebar
