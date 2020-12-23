@@ -19,6 +19,8 @@ set smartcase
 set lazyredraw
 set wildmode=longest,full
 set pastetoggle=<F2>
+set splitright
+set splitbelow
 
 nnoremap <SPACE> <Nop>
 let mapleader=" " " mapleader
