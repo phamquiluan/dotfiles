@@ -47,6 +47,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'preservim/nerdtree'
+Plugin 'psf/black'
 call vundle#end()
 
 filetype plugin indent on
@@ -64,6 +65,9 @@ filetype plugin on
 " nnoremap <leader>gl :Git log --decorate --graph --oneline --all<CR>
 
 
+
+nmap <leader>` :Black<CR>
+
 " set fold
 nnoremap <leader>1 :set foldlevel=0<CR>
 nnoremap <leader>2 :set foldlevel=1<CR>
@@ -71,7 +75,8 @@ nnoremap <leader>3 :set foldlevel=2<CR>
 nnoremap <leader>4 :set foldlevel=11<CR>
 
 nnoremap <C-f> :Rg
-nnoremap <leader>v :vsplit<CR>
+" nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>\ :vsplit<CR>
 
 nnoremap ? :YcmCompleter GetDoc<CR>
 nnoremap gt :YcmCompleter GetType<CR>
@@ -81,6 +86,7 @@ nnoremap <leader>f :FZF<CR>
 let g:fzf_preview_window = ""
 let g:fzf_preview_window = "right:60%"
 let $FZF_DEFAULT_COMMAND = "rg --files --hidden"
+
 
 " for NERDTree
 let NERDTreeIgnore = ["__pycache__"]
