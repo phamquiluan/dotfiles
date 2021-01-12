@@ -3,7 +3,7 @@ syntax on
 set nocompatible 
 set number
 set wildmenu
-set mouse=a
+set mouse-=a
 filetype off
 set tabstop=4
 set shiftwidth=4
@@ -44,7 +44,6 @@ Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
-" Plugin 'jiangmiao/auto-pairs'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'preservim/nerdtree'
 Plugin 'psf/black'
