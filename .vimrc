@@ -46,7 +46,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'preservim/nerdtree'
-Plugin 'psf/black'
+" Plugin 'psf/black'
 call vundle#end()
 
 filetype plugin indent on
@@ -64,7 +64,6 @@ filetype plugin on
 " nnoremap <leader>gl :Git log --decorate --graph --oneline --all<CR>
 
 
-
 nmap <leader>` :Black<CR>
 
 " set fold
@@ -74,11 +73,15 @@ nnoremap <leader>3 :set foldlevel=2<CR>
 nnoremap <leader>4 :set foldlevel=11<CR>
 
 nnoremap <C-f> :Rg
-" nnoremap <leader>v :vsplit<CR>
-nnoremap <leader>\ :vsplit<CR>
 
-nnoremap ? :YcmCompleter GetDoc<CR>
-nnoremap gt :YcmCompleter GetType<CR>
+" for splits
+nnoremap <leader>\ :vsplit<CR>
+nnoremap <leader>- :split<CR>
+
+" for buffer
+nnoremap <leader>h :bp<CR>
+nnoremap <leader>l :bn<CR>
+nnoremap <leader>bd :bp\|bd#<CR>
 
 " for fzf
 nnoremap <leader>f :FZF<CR>
@@ -93,7 +96,7 @@ nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDSpaceDelims = 1
 
 
-" plugin YCM, Youcompleteme
+" for YCM, Youcompleteme
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0 
@@ -113,6 +116,9 @@ let g:ycm_python_binary_path = "python3"
 let g:ycm_disable_for_files_larger_than_kb = 2000
 let g:ycm_key_list_stop_completion = ["<C-y>", "<CR>"]
 let g:ycm_key_invoke_completion = "<C-j>"
+
+nnoremap ? :YcmCompleter GetDoc<CR>
+nnoremap gt :YcmCompleter GetType<CR>
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " for netrw sidebar
@@ -172,7 +178,7 @@ autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
 let &t_TI = ""
 let &t_TE = ""
 
-" Zoom / Restore window.
+" for Zoom / Restore window.
 function! s:ZoomToggle() abort
     if exists('t:zoomed') && t:zoomed
         execute t:zoom_winrestcmd
