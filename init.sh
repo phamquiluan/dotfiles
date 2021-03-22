@@ -10,7 +10,16 @@ if [ ! -z $APT_CMD ]; then
 	sudo add-apt-repository ppa:jonathonf/vim -y
 	sudo apt update -y && sudo apt upgrade -y
 	sudo apt install -y build-essential cmake
-	sudo apt install -y vim-gtk
+
+	# sudo apt install -y vim-gtk
+	# install vim 8.2
+	sudo add-apt-repository ppa:jonathonf/vim -y && sudo apt update -y
+	sudo apt install vim-gtk -y
+	
+	# https://stackoverflow.com/questions/65284572/your-c-compiler-does-not-fully-support-c17
+	sudo apt-get install g++-8
+	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7
+	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 else
 	printf "\nNOT SUPPORT :))"
 	exit 1
