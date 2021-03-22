@@ -11,10 +11,8 @@ if [ ! -z $APT_CMD ]; then
 	sudo apt update -y && sudo apt upgrade -y
 	sudo apt install -y build-essential cmake
 
-	# sudo apt install -y vim-gtk
 	# install vim 8.2
-	sudo add-apt-repository ppa:jonathonf/vim -y && sudo apt update -y
-	sudo apt install vim-gtk -y
+	sudo apt install -y vim
 	
 	# https://stackoverflow.com/questions/65284572/your-c-compiler-does-not-fully-support-c17
 	sudo apt-get install g++-8
