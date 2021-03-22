@@ -2,14 +2,9 @@
 
 CUR_DIR="$(pwd)"
 
-# YUM_CMD=$(which yum)
 APT_CMD=$(which apt)
 
 printf "\n===== Installing build-essential cmake vim.. ====="
-# if [ ! -z $YUM_CMD ]; then
-# 	sudo yum update -y
-# 	sudo yum install -y build-essential cmake vim-gtk
-# elif [ ! -z $APT_CMD ]; then 
 if [ ! -z $APT_CMD ]; then 
 	sudo apt update -y && sudo apt upgrade -y
 	sudo add-apt-repository ppa:jonathonf/vim -y
@@ -34,11 +29,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py
-
-
-cd $CUR_DIR
-printf "\n===== Copy vim template ====="
-cp -r templates ~/.vim/templates
 
 
 printf "\n===== Install fzf.. ====="
