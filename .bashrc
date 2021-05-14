@@ -132,3 +132,6 @@ fi
 
 
 bind '"\C-p": previous-history'
+
+# change rate speed
+xset r rate 300 50
