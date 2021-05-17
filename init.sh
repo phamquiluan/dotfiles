@@ -31,6 +31,13 @@ cp .ycm_extra_conf.py ~/.ycm_extra_conf
 cp .inputrc ~/.inputrc
 cp .tmux.conf ~/.tmux.conf
 
+printf "\n===== Copying SSH config file.. ====="
+if [ -n -d $HOME/.ssh ]; then
+	echo "~/..ssh does not exists! Create one.."
+	mkdir $HOME/.ssh
+fi
+cp .ssh/config $HOME/.ssh/config
+
 printf "\n===== Setup YouCompleteMe.. ====="
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
