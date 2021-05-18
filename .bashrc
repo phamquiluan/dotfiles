@@ -128,4 +128,4 @@ fi
 bind '"\C-p": previous-history'
 
 # change rate speed
-xset r rate 220 30
+xset r rate 450 35
