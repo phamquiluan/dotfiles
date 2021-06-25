@@ -1,6 +1,6 @@
 " general config
 syntax on
-set nocompatible 
+set nocompatible
 set number
 set wildmenu
 set mouse-=a
@@ -21,6 +21,7 @@ set wildmode=longest,full
 set pastetoggle=<F2>
 set splitright
 set splitbelow
+set backupcopy=yes
 
 nnoremap <SPACE> <Nop>
 let mapleader=" " " mapleader
@@ -99,7 +100,7 @@ let g:NERDSpaceDelims = 1
 " for YCM, Youcompleteme
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 let g:ycm_show_diagnostics_ui = 0
-let g:ycm_enable_diagnostic_signs = 0 
+let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_auto_hover=""  " this guys is being default at April :))
 let g:ycm_complete_in_comments = 1
@@ -165,7 +166,7 @@ endif
 nnoremap <esc> :noh<Cr><esc>
 nnoremap <esc>^[ <esc>^[
 
-" for highlight 
+" for highlight
 hi Folded ctermbg=Black
 hi DiffText   cterm=none ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
 hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black guibg=LightMagenta
