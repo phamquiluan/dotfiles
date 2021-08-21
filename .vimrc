@@ -47,23 +47,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'preservim/nerdtree'
-" Plugin 'psf/black'
 call vundle#end()
 
 filetype plugin indent on
 filetype plugin on
-
-" plugin vim-fugitive
-" nnoremap <leader>gs :Gstatus<CR>
-" nnoremap <leader>gc :Gcommit<CR>
-" nnoremap <leader>gp :Gpush<CR>
-" nnoremap <leader>gd :Git diff HEAD<CR>
-" nnoremap <leader>gb :Git branch -a<CR>
-" nnoremap <leader>gw :Gwrite<CR>
-" nnoremap <leader>gj :diffget //3<CR>
-" nnoremap <leader>gh :diffget //2<CR>
-" nnoremap <leader>gl :Git log --decorate --graph --oneline --all<CR>
-
 
 nmap <leader>` :Black<CR>
 
@@ -86,10 +73,8 @@ nnoremap <leader>bd :bp\|bd#<CR>
 
 " for fzf
 nnoremap <leader>f :FZF<CR>
-let g:fzf_preview_window = ""
-let g:fzf_preview_window = "right:60%"
+let g:fzf_preview_window = ['right:50%']
 let $FZF_DEFAULT_COMMAND = "rg --files --hidden"
-
 
 " for NERDTree
 let NERDTreeIgnore = ["__pycache__"]
@@ -108,7 +93,6 @@ let g:ycm_semantic_triggers =  {
   \   "c" : ["->", "."],
   \   "cpp,cuda,objcpp" : ["->", ".", "::"],
   \   "cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go" : [".", "re!\w{2}"],
-  \   "python" : [".", "re!\w{2}"],
   \ }
 set completeopt-=preview
 " let g:EclimFileTypeValidate = 0
