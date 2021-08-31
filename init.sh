@@ -2,29 +2,31 @@
 
 CUR_DIR="$(pwd)"
 
-APT_CMD=$(which apt)
-
+sudo apt-get update -y && sudo apt-get upgrade -y
 echo "Install necessary utilities"
 sudo apt-get install -y \
+	python3-dev \
 	git \
+	libncurses5-dev \
 	unzip \
 	libxt-dev \
+	libx11-dev \
+	libxtst-dev \
 	build-essential \
 	cmake
 
 echo "===== Clone vim and compile from souce ====="
-git clone https://github.com/vim/vim/archive/master.zip
-unzip master.zip
-cd vim-master
-./configure --with-x
+git clone https://github.com/vim/vim.git
+cd vim/src
+PY3_CONFIG=$(python3-config --configdir)
+./configure --with-x 			    \
+    --enable-multibyte                      \
+    --enable-python3interp=dynamic          \
+    --with-python3-config-dir=$PY3_CONFIG
+
 make -j8
 sudo make install
-
-# # https://stackoverflow.com/questions/65284572/your-c-compiler-does-not-fully-support-c17
-# sudo apt-get install g++-8
-# sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7
-# sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8
-
+cd ../..
 
 echo "===== Copying config files.. ====="
 cp .bashrc ~/.bashrc
