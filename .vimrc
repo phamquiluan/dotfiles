@@ -42,7 +42,6 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'tibabit/vim-templates'
 Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }
-Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Vimjas/vim-python-pep8-indent'
