@@ -156,6 +156,7 @@ hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black
 
 autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
 
 " ref: https://stackoverflow.com/questions/62148994/strange-character-since-last-update-42m-in-vim
