@@ -12,8 +12,9 @@ sudo apt-get install -y \
 	libxt-dev \
 	libx11-dev \
 	libxtst-dev \
-	build-essential \
-	cmake
+	build-essential
+
+git clone git@github.com:Kitware/CMake.git && cd Cmake && ./bootstrap && make && sudo make install
 
 echo "===== Clone vim and compile from souce ====="
 git clone https://github.com/vim/vim.git
