@@ -5,6 +5,7 @@ CUR_DIR="$(pwd)"
 # Install necessary utilities
 apt-get update -y && apt-get upgrade -y
 
+
 # Clone vim and compile from souce
 git clone https://github.com/vim/vim.git
 cd vim/src
@@ -30,6 +31,9 @@ cp .tmux.conf ~/.tmux.conf
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
+
+git clone git@github.com:Kitware/CMake.git && cd CMake && ./bootstrap && make && sudo make install
+
 python3 install.py
 
 
