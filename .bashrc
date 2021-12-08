@@ -129,3 +129,6 @@ bind '"\C-p": previous-history'
 
 # change rate speed
 xset r rate 450 35
+
+# for gpg
+export GPG_TTY=$(tty)
