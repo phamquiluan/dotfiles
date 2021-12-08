@@ -32,7 +32,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 
-git clone git@github.com:Kitware/CMake.git && cd CMake && ./bootstrap && make && sudo make install
+git clone https://github.com/Kitware/CMake.git && cd CMake && ./bootstrap && make && sudo make install
 
 python3 install.py
 
