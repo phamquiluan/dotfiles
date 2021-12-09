@@ -61,7 +61,7 @@ nnoremap <leader>2 :set foldlevel=1<CR>
 nnoremap <leader>3 :set foldlevel=2<CR>
 nnoremap <leader>4 :set foldlevel=11<CR>
 
-nnoremap <C-f> :Rg
+nnoremap <C-f> :Rg<CR>
 
 " for splits
 nnoremap <leader>\ :vsplit<CR>
@@ -179,6 +179,8 @@ function! s:ZoomToggle() abort
 endfunction
 command! ZoomToggle call s:ZoomToggle()
 nnoremap <silent> <Leader><Leader> :ZoomToggle<CR>
+
+command! W w
 
 
 pyx << EOF
