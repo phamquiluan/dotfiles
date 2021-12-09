@@ -43,6 +43,8 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'nvie/vim-flake8'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'ekalinin/dockerfile.vim'
+Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'tibabit/vim-templates'
 Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }
 Plugin 'scrooloose/nerdcommenter'
