@@ -22,6 +22,7 @@ set pastetoggle=<F2>
 set splitright
 set splitbelow
 set backupcopy=yes
+set backspace=2
 
 nnoremap <SPACE> <Nop>
 let mapleader=" " " mapleader
@@ -181,6 +182,7 @@ command! ZoomToggle call s:ZoomToggle()
 nnoremap <silent> <Leader><Leader> :ZoomToggle<CR>
 
 command! W w
+command! FormatCpp %!astyle
 
 
 pyx << EOF
