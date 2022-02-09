@@ -162,6 +162,7 @@ autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
 autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
+autocmd VimResized * wincmd =
 
 " ref: https://stackoverflow.com/questions/62148994/strange-character-since-last-update-42m-in-vim
 let &t_TI = ""
