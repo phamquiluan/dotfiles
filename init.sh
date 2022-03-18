@@ -12,7 +12,8 @@ sudo apt-get install -y \
 	libxt-dev \
 	libx11-dev \
 	libxtst-dev \
-	build-essential
+	build-essential \
+	xclip
 
 git clone git@github.com:Kitware/CMake.git && cd CMake && ./bootstrap && make && sudo make install
 
