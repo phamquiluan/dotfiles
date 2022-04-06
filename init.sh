@@ -15,7 +15,7 @@ sudo apt-get install -y \
 	build-essential \
 	xclip
 
-git clone git@github.com:Kitware/CMake.git && cd CMake && ./bootstrap && make && sudo make install
+sudo snap install cmake --classic
 
 echo "===== Clone vim and compile from souce ====="
 git clone https://github.com/vim/vim.git
