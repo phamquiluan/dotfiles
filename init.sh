@@ -5,6 +5,7 @@ CUR_DIR="$(pwd)"
 sudo apt-get update -y && sudo apt-get upgrade -y
 echo "Install necessary utilities"
 sudo apt-get install -y \
+	htop \
 	python3-dev \
 	git \
 	libncurses5-dev \
@@ -13,22 +14,15 @@ sudo apt-get install -y \
 	libx11-dev \
 	libxtst-dev \
 	build-essential \
-	xclip
-
-sudo snap install cmake --classic
-
-echo "===== Clone vim and compile from souce ====="
-git clone https://github.com/vim/vim.git
-cd vim/src
-PY3_CONFIG=$(python3-config --configdir)
-./configure --with-x 			    \
-    --enable-multibyte                      \
-    --enable-python3interp=dynamic          \
-    --with-python3-config-dir=$PY3_CONFIG
-
-make -j8
-sudo make install
-cd ../..
+	cmake \
+	vim-nox \
+	xclip \
+	g++-8
+	mono-complete \
+	golang \
+	nodejs \
+	default-jdk \
+	npm
 
 echo "===== Copying config files.. ====="
 cp .bashrc ~/.bashrc
@@ -45,15 +39,11 @@ fi
 cp .ssh/config $HOME/.ssh/config
 
 
-sudo apt-get install g++-8
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8
-
 echo "===== Setup YouCompleteMe.. ====="
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
-python3 install.py
+python3 install.py --all
 
 
 echo "===== Install fzf.. ====="
