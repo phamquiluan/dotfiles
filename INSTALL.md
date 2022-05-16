@@ -5,20 +5,22 @@ An instruction to install a new Linux machine
 
 ### steps:
 
-0. Update and Upgrade
+**Update and Upgrade**
 
 ```bash 
 sudo apt-get update -y && sudo apt-get upgrade -y 
 ```
 
-2. Install Python
+**Install nvidia drivers**
 
+In the Additional Drivers section.
+
+**Install Python**
 ```bash
 sudo apt-get install python3.9 python3.9-venv python3.9-dev
 ```
 
-2. Copy dotfiles and install Vim / YCM / Plugins
-
+**Copy dotfiles and install Vim / YCM / Plugins**
 ```bash
 cp .bashrc ~/.bashrc
 cp .bash_aliases ~/.bash_aliases
@@ -34,7 +36,7 @@ python3 install.py --all
 ```
 
 
-3. Install FZF
+**Install FZF**
 
 ```bash
 if [ -n -d "~/.fzf" ]; then
@@ -43,7 +45,7 @@ fi
 bash ~/.fzf/install --all
 ```
 
-4. Install Docker / Docker Compose / Docker Nvidia
+**Install Docker / Docker Compose / Docker Nvidia**
 
 Install docker
 ```bash
@@ -57,3 +59,11 @@ curl https://get.docker.com | sh \
 Install docker nvidia, https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 
 Install docker compose, https://docs.docker.com/compose/install/
+
+**Install common softwares**
+
+- Chrome
+- Zoom
+- Slack 
+- Mendeley
+- Ibus Bamboo
