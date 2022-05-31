@@ -17,7 +17,11 @@ In the Additional Drivers section.
 
 **Install Python**
 ```bash
-sudo apt-get install python3.9 python3.9-venv python3.9-dev
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+
+# update source list to focal
+sudo apt update -y
 ```
 
 **Copy dotfiles and install Vim / YCM / Plugins**
