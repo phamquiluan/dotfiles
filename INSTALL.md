@@ -37,6 +37,29 @@ sudo apt-get install -y python3.6 python3.6-dev python3.6-venv
 sudo apt-get install -y python3.7 python3.7-dev python3.7-venv
 ```
 
+**Install prerequisites**
+
+```bash
+sudo apt-get install -y \
+    htop \
+  git \
+      curl \
+  libncurses5-dev \
+  unzip \
+  libxt-dev \
+  libx11-dev \
+  libxtst-dev \
+  build-essential \
+  cmake \
+  xclip \
+  mono-complete \
+  golang \
+  nodejs \
+  default-jdk \
+  npm \
+  software-properties-common
+```
+
 **Copy dotfiles and install Vim / YCM / Plugins**
 ```bash
 cp .bashrc ~/.bashrc
