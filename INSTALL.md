@@ -15,6 +15,15 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 
 In the Additional Drivers section.
 
+**Switch Capslock and Escape** 
+
+```bash
+gnome-tweaks
+
+remember to chown -R user:user /home/user
+```
+
+
 **Install Python**
 ```bash
 sudo apt install software-properties-common
@@ -22,6 +31,10 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 
 # update source list to focal
 sudo apt update -y
+
+# install python
+sudo apt-get install -y python3.6 python3.6-dev python3.6-venv
+sudo apt-get install -y python3.7 python3.7-dev python3.7-venv
 ```
 
 **Copy dotfiles and install Vim / YCM / Plugins**
