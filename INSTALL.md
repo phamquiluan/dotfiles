@@ -40,24 +40,32 @@ sudo apt-get install -y python3.7 python3.7-dev python3.7-venv
 **Install prerequisites**
 
 ```bash
-sudo apt-get install -y \
-    htop \
-  git \
-      curl \
-  libncurses5-dev \
-  unzip \
-  libxt-dev \
-  libx11-dev \
-  libxtst-dev \
-  build-essential \
-  cmake \
-  xclip \
-  mono-complete \
-  golang \
-  nodejs \
-  default-jdk \
-  npm \
-  software-properties-common
+sudo apt-get install -y htop git curl unzip \
+  libncurses5-dev libxt-dev libx11-dev libxtst-dev \
+  libssl-dev libsqlite3-dev libreadline-dev \
+  libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
+  build-essential cmake xclip mono-complete golang \
+  nodejs default-jdk npm software-properties-common
+```
+
+**Compile Python3.9**
+```bash
+curl -O https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz 
+tar xvf Python-3.9.13.tar.xz
+cd Python-3.9.13.tar.xz
+
+./configure \
+        --enable-shared \
+        --enable-optimizations \
+        --enable-loadable-sqlite-extensions \
+        --disable-ipv6 \
+        --enable-big-digits=30 \
+        --with-ensurepip="upgrade" \
+        --with-lto \
+        --with-assertions \
+        --with-system-ffi
+make -j10
+sudo make install 
 ```
 
 **Copy dotfiles and install Vim / YCM / Plugins**
