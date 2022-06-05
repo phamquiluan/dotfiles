@@ -1,30 +1,49 @@
 # dotfiles
-
 An instruction to install a new Linux machine
 
-
 ### steps:
-
-**Update and Upgrade**
-
+<details>
+<summary>Update and upgrade</summary>
+  
 ```bash 
 sudo apt-get update -y && sudo apt-get upgrade -y 
+  
+sudo apt-get install -y htop git curl unzip \
+  libncurses5-dev libxt-dev libx11-dev libxtst-dev \
+  libssl-dev libsqlite3-dev libreadline-dev \
+  libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
+  build-essential cmake xclip mono-complete golang \
+  nodejs default-jdk npm software-properties-common
 ```
+</details> 
 
-**Install nvidia drivers**
 
-In the Additional Drivers section.
 
-**Switch Capslock and Escape** 
+
+
+<details>
+<summary>Install Nvidia drivers</summary>
+
+Check the Additional Drivers section.
+</details>
+  
+<details>
+<summary>Switch Capslock and Escape</summary>
 
 ```bash
 gnome-tweaks
 
 remember to chown -R user:user /home/user
 ```
+</details>
 
 
-**Install Python**
+
+
+
+<details>
+<summary>Install Python3.6 & Python3.7</summary>  
+  
 ```bash
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -36,40 +55,15 @@ sudo apt update -y
 sudo apt-get install -y python3.6 python3.6-dev python3.6-venv
 sudo apt-get install -y python3.7 python3.7-dev python3.7-venv
 ```
-
-**Install prerequisites**
-
-```bash
-sudo apt-get install -y htop git curl unzip \
-  libncurses5-dev libxt-dev libx11-dev libxtst-dev \
-  libssl-dev libsqlite3-dev libreadline-dev \
-  libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
-  build-essential cmake xclip mono-complete golang \
-  nodejs default-jdk npm software-properties-common
-```
-
-**Compile Python3.9**
-```bash
-curl -O https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz 
-tar xvf Python-3.9.13.tar.xz
-cd Python-3.9.13.tar.xz
-
-./configure \
-        --enable-shared \
-        --enable-optimizations \
-        --enable-loadable-sqlite-extensions \
-        --disable-ipv6 \
-        --enable-big-digits=30 \
-        --with-ensurepip="upgrade" \
-        --with-lto \
-        --with-assertions \
-        --with-system-ffi
-make -j10
-sudo make install 
-```
+</details>
 
 
-**Compile Python3.8**
+
+
+
+<details>
+<summary>Compile Python3.8</summary>
+  
 ```bash
 curl -O https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tar.xz 
 tar xvf Python-3.8.12.tar.xz
@@ -89,9 +83,41 @@ cd Python-3.8.12.tar.xz
 make -j10
 sudo make install 
 ```
+</details>
 
 
-**Compile Vim**
+
+
+
+<details>
+<summary>Compile Python3.9</summary>
+  
+```bash
+curl -O https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz 
+tar xvf Python-3.9.13.tar.xz
+cd Python-3.9.13.tar.xz
+
+./configure \
+        --enable-shared \
+        --enable-optimizations \
+        --enable-loadable-sqlite-extensions \
+        --disable-ipv6 \
+        --enable-big-digits=30 \
+        --with-ensurepip="upgrade" \
+        --with-lto \
+        --with-assertions \
+        --with-system-ffi
+make -j10
+sudo make install 
+```
+</details>
+
+
+
+
+
+<details>
+<summary>Compile Vim</summary>
 
 ```
 git clone git@github.com:vim/vim.git
@@ -102,10 +128,12 @@ cat src/INSTALL
 
 # ensure vim is compile with clipboard and python3 support 
 ```
+</details>
 
 
-
-**Copy dotfiles and install Vim / YCM / Plugins**
+<details>
+<summary>Copy dotfiles and install Vim / YCM / Plugins</summary>
+  
 ```bash
 cp .bashrc ~/.bashrc
 cp .bash_aliases ~/.bash_aliases
@@ -119,8 +147,13 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --go-completer --rust-completer --ts-completer --verbose
 ```
-
-**Install FZF**
+</details>
+  
+ 
+ 
+ 
+<details> 
+<summary>Install FZF</summary>
 
 ```bash
 if [ -n -d "~/.fzf" ]; then
@@ -128,8 +161,13 @@ if [ -n -d "~/.fzf" ]; then
 fi
 bash ~/.fzf/install --all
 ```
+</details>
 
-**Install Docker / Docker Compose / Docker Nvidia**
+
+
+
+<details>
+<summary>Install Docker / Docker Compose / Docker Nvidia</summary>
 
 Install docker
 ```bash
@@ -143,16 +181,27 @@ curl https://get.docker.com | sh \
 Install docker nvidia, https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 
 Install docker compose, https://docs.docker.com/compose/install/
-
-**Install common softwares**
-
+</details>
+  
+  
+  
+  
+  
+<details>
+<summary>Install common softwares</summary>
+  
 - Chrome
 - Zoom
 - Slack 
 - Mendeley
 - Ibus Bamboo
+</details>
 
-**Install AWSCLI**
+
+
+
+<details>
+  <summary>Install AWSCLI</summary>
 
 ```bash
 # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
@@ -160,4 +209,4 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 ```
-
+</details>
