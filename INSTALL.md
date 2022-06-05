@@ -91,6 +91,18 @@ sudo make install
 ```
 
 
+**Compile Vim**
+
+```
+git clone git@github.com:vim/vim.git
+cd vim/vim
+
+# read
+cat src/INSTALL
+
+# ensure vim is compile with clipboard and python3 support 
+```
+
 
 
 **Copy dotfiles and install Vim / YCM / Plugins**
@@ -105,7 +117,7 @@ cp .tmux.conf ~/.tmux.conf
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
-python3 install.py --all
+python3 install.py --go-completer --rust-completer --ts-completer --verbose
 ```
 
 **Install FZF**
