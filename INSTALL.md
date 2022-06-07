@@ -147,6 +147,9 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --go-completer --rust-completer --ts-completer --verbose
 ```
+
+Give a little care about JsCompleter, remove tern
+https://github.com/ycm-core/YouCompleteMe#javascript-and-typescript-semantic-completion
 </details>
   
  
