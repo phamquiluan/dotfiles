@@ -1,14 +1,14 @@
 # dotfiles
 An instruction to install a new Linux machine
 
-### custom partitioning during installation
+### customize partitions during installation
 
 https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-installation
 
-- /root
+- /root (40GB)
 - /home/user (e.g. /home/luan)
-- /docker
-- /data
+- /docker 
+- /data (HDD)
 
 
 ### steps:
