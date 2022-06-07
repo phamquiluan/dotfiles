@@ -5,7 +5,10 @@ An instruction to install a new Linux machine
 
 https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-installation
 
-- /home : 40GB
+- /root
+- /home/user (e.g. /home/luan)
+- /docker
+- /data
 
 
 ### steps:
