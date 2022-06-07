@@ -1,6 +1,13 @@
 # dotfiles
 An instruction to install a new Linux machine
 
+### custom partitioning during installation
+
+https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-installation
+
+- /home : 40GB
+
+
 ### steps:
 <details>
 <summary>Update and upgrade</summary>
