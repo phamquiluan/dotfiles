@@ -16,10 +16,8 @@ alias ww="watch -n 0.3"
 alias gs="git status"
 alias gd="git diff"
 alias gb="git branch -a"
-# alias gl="git log --decorate --graph --oneline --all"
 alias gl="git log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'"
-
-alias gitlog="git log --decorate --graph --oneline --all"
+alias gcm="git commit -m"
 
 # for conda
 alias ca="conda activate"
