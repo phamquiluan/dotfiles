@@ -1,5 +1,5 @@
 # dotfiles
-An instruction to install a new Linux machine
+An instruction to install a new Linux machine (tested on Debian, and Ubuntu 21.10)
 
 ### customize partitions during installation
 
