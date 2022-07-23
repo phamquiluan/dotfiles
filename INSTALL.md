@@ -169,9 +169,7 @@ https://github.com/ycm-core/YouCompleteMe#javascript-and-typescript-semantic-com
 <summary>Install FZF</summary>
 
 ```bash
-if [ -n -d "~/.fzf" ]; then
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-fi
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 bash ~/.fzf/install --all
 ```
 </details>
@@ -221,5 +219,17 @@ Install docker compose, https://docs.docker.com/compose/install/
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+```
+</details>
+
+
+<details>
+  <summary>Install kubectl</summary>
+
+```bash
+sudo curl --silent --location -o /usr/local/bin/kubectl \
+   https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
+
+sudo chmod +x /usr/local/bin/kubectl
 ```
 </details>
