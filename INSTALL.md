@@ -186,6 +186,10 @@ Install docker
 curl https://get.docker.com | sh \
   && sudo systemctl --now enable docker
   
+# add user to docker group
+sudo usermod -aG docker $USER
+
+# log out, log in
 # test by `docker run hello-world` or `docker run ubuntu`
 ```
 
