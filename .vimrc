@@ -50,6 +50,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'preservim/nerdtree'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'wellle/tmux-complete.vim'
 call vundle#end()
 
 filetype plugin indent on
