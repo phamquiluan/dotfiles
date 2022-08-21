@@ -23,6 +23,7 @@ set splitright
 set splitbelow
 set backupcopy=yes
 set backspace=2
+set ruler
 
 nnoremap <SPACE> <Nop>
 let mapleader=" " " mapleader
