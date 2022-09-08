@@ -35,6 +35,12 @@ sudo apt-get install -y htop git curl unzip \
 <summary>Install Nvidia drivers</summary>
 
 Check the Additional Drivers section.
+
+or run the following commands
+```bash
+sudo apt-get install nvidia-drive.. <tab>
+```
+then, REBOOT
 </details>
   
 <details>
