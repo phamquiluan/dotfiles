@@ -61,7 +61,6 @@ remember to chown -R user:user /home/user
 <summary>Install Python3.6 & Python3.7</summary>  
   
 ```bash
-sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 
 # update source list to focal
