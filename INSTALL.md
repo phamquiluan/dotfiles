@@ -67,36 +67,8 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update -y
 
 # install python
-sudo apt-get install -y python3.6 python3.6-dev python3.6-venv
 sudo apt-get install -y python3.7 python3.7-dev python3.7-venv
-```
-</details>
-
-
-
-
-
-<details>
-<summary>Compile Python3.8</summary>
-  
-```bash
-curl -O https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tar.xz 
-tar xvf Python-3.8.12.tar.xz
-cd Python-3.8.12.tar.xz
-
-./configure \
-    LDFLAGS="-Wl,-rpath /usr/local/lib" \
-    --enable-shared \
-    --enable-optimizations \
-    --enable-loadable-sqlite-extensions \
-    --disable-ipv6 \
-    --enable-big-digits=30 \
-    --with-ensurepip="upgrade" \
-    --with-lto \
-    --with-assertions \
-    --with-system-ffi
-make -j10
-sudo make install 
+sudo apt-get install -y python3.8 python3.8-dev python3.8-venv
 ```
 </details>
 
@@ -136,7 +108,7 @@ sudo make install
 
 ```
 git clone git@github.com:vim/vim.git
-cd vim/vim
+cd vim
 
 # read
 cat src/INSTALL
