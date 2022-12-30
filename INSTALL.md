@@ -236,6 +236,7 @@ sudo mv ./kind /usr/local/bin/kind
 ```
 </details>
   
+<details>
 <summary>Install Skaffold</summary>
 
 ```bash
