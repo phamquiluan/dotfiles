@@ -214,6 +214,7 @@ sudo curl --silent --location -o /usr/local/bin/kubectl \
 
 sudo chmod +x /usr/local/bin/kubectl
 ```
+https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/
 </details>
 
 <details>
