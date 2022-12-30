@@ -215,3 +215,13 @@ sudo curl --silent --location -o /usr/local/bin/kubectl \
 sudo chmod +x /usr/local/bin/kubectl
 ```
 </details>
+
+<details>
+  <summary>Install Helm</summary>
+
+```bash
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+```
+</details>
