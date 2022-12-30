@@ -236,6 +236,17 @@ sudo mv ./kind /usr/local/bin/kind
 ```
 </details>
   
+  
+<details>
+<summary>Install Minikube</summary>
+
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+</details>
+  
+  
 <details>
 <summary>Install Skaffold</summary>
 
