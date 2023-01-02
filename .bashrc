@@ -115,11 +115,11 @@ if ! shopt -oq posix; then
 fi
 
 
+# Enable fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
 
-
-# conda activate $CONDA_DEFAULT_ENV
+# Enable default virtual environment if there is one
 if [ -f env/bin/activate ]; then
 	source env/bin/activate
 fi
