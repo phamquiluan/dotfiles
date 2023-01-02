@@ -22,11 +22,9 @@ sudo apt-get install -y htop git curl unzip \
   libncurses5-dev libxt-dev libx11-dev libxtst-dev \
   libssl-dev libsqlite3-dev libreadline-dev \
   libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
-  build-essential cmake xclip mono-complete golang \
-  nodejs default-jdk npm software-properties-common
+  build-essential cmake xclip software-properties-common
 ```
 </details> 
-
 
 
 
@@ -58,7 +56,7 @@ remember to chown -R user:user /home/user
 
 
 <details>
-<summary>Install Python3.6 & Python3.7</summary>  
+<summary>Install Python3.7 & Python3.8</summary>  
   
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -132,6 +130,10 @@ cp .tmux.conf ~/.tmux.conf
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
+
+python3 install.py --verbose
+
+# or
 python3 install.py --go-completer --rust-completer --ts-completer --verbose
 ```
 
