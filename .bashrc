@@ -134,4 +134,4 @@ xset r rate 450 35
 export GPG_TTY=$(tty)
 
 # for kubectl completion
-source <(kubectl completion bash)
+. <(kubectl completion bash)
