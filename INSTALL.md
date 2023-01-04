@@ -1,5 +1,8 @@
 # dotfiles
-An instruction to install a new Linux machine (tested on Debian, Ubuntu 20.04, 21.10, and 22.04)
+An instruction to install a new Linux machine for Computer Scientists (tested on Debian, Ubuntu 20.04, 21.10, and 22.04)
+
+TODO:
+- add image to visualize the tool landscape
 
 ### (optional) customize partitions during OS installation
 
