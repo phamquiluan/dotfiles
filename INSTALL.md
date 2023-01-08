@@ -219,7 +219,9 @@ sudo curl --silent --location -o /usr/local/bin/kubectl \
 
 sudo chmod +x /usr/local/bin/kubectl
 # for completion
-echo 'source <(kubectl completion bash)' >>~/.bashrc 
+echo 'source <(kubectl completion bash)' >> ~/.bashrc 
+echo 'alias k=kubectl' >> ~/.bashrc 
+echo 'complete -o default -F __start_kubectl k' >> ~/.bashrc
 ```
 </details>
 
