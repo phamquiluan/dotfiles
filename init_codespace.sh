@@ -1,4 +1,5 @@
 sudo apt-get update -y
+cwd=$(pwd)
 
 echo "Copy dotfiles.."
 cp .bashrc ~/.bashrc
@@ -19,3 +20,8 @@ echo "Install FZF.."
 sudo apt install ripgrep
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 bash ~/.fzf/install --all
+
+cd $cwd
+echo "Prepare python venv"
+python -m venv env
+. env/bin/activate
