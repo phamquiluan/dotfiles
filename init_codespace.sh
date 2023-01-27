@@ -22,5 +22,3 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 bash ~/.fzf/install --all
 
 cd $cwd
-echo "Create python venv at $pwd"
-python -m venv env
