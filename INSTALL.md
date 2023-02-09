@@ -172,7 +172,7 @@ curl https://get.docker.com | sh \
 # add user to docker group
 sudo usermod -aG docker $USER
 
-# log out, log in
+# reboot
 # test by `docker run hello-world` or `docker run ubuntu`
 ```
 
