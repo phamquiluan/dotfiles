@@ -194,6 +194,12 @@ Install docker compose, https://docs.docker.com/compose/install/
 - Mendeley
 - Ibus Bamboo
 - Mendeley: https://www.mendeley.com/autoupdates/installers/1.19.8
+  
+```bash
+wget https://desktop-download.mendeley.com/download/apt/pool/main/m/mendeleydesktop/mendeleydesktop_1.19.4-stable_amd64.deb
+sudo dpkg -i /mendeleydesktop_1.19.4-stable_amd64.deb
+sudo apt -f install
+```
 </details>
 
 
