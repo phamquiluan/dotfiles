@@ -193,6 +193,7 @@ Install docker compose, https://docs.docker.com/compose/install/
 - Slack 
 - Mendeley
 - Ibus Bamboo
+- Mendeley: https://www.mendeley.com/autoupdates/installers/1.19.8
 </details>
 
 
