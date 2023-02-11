@@ -196,9 +196,14 @@ Install docker compose, https://docs.docker.com/compose/install/
 - Mendeley: https://www.mendeley.com/autoupdates/installers/1.19.8
   
 ```bash
-wget https://desktop-download.mendeley.com/download/apt/pool/main/m/mendeleydesktop/mendeleydesktop_1.19.4-stable_amd64.deb
-sudo dpkg -i /mendeleydesktop_1.19.4-stable_amd64.deb
-sudo apt -f install
+wget https://github.com/phamquiluan/dotfiles/releases/download/v0.0.1/mendeleydesktop-1.19.8-linux-x86_64.tar.bz2
+sudo mv mendeleydesktop-1.19.8-linux-x86_64.tar.bz2 /
+sudo tar xvf mendeleydesktop-1.19.8-linux-x86_64.tar.bz2
+cd mendeleydesktop-1.19.8-linux-x86_64
+sudo ./bin/installer....
+  
+# start by
+m 
 ```
 </details>
 
