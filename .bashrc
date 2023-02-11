@@ -133,5 +133,17 @@ xset r rate 450 35
 # for gpg
 export GPG_TTY=$(tty)
 
+
+# for awcli completion 
+if [ -f '/usr/local/bin/aws_completer' ]; then
+	complete -C '/usr/local/bin/aws_completer' aws
+fi
+
 # for kubectl completion
 . <(kubectl completion bash)
+alias k=kubectl
+complete -o default -F __start_kubectl k
+
+
+# for mendeley
+alias m="cd / && nohup ./mendeleydesktop-1.19.8-linux-x86_64/bin/mendeleydesktop &"
