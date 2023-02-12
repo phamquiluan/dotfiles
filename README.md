@@ -58,7 +58,7 @@ remember to chown -R user:user /home/user
 
 
 <details>
-<summary>Install Python3.7 & Python3.8</summary>  
+<summary>Install Python from 3.7 to 3.10</summary>  
   
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -69,36 +69,11 @@ sudo apt update -y
 # install python
 sudo apt-get install -y python3.7 python3.7-dev python3.7-venv
 sudo apt-get install -y python3.8 python3.8-dev python3.8-venv
+sudo apt-get install -y python3.9 python3.9-dev python3.9-venv
+sudo apt-get install -y python3.10 python3.10-dev python3.10-venv
+
 ```
 </details>
-
-
-
-
-
-<details>
-<summary>Compile Python3.9</summary>
-  
-```bash
-curl -O https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz 
-tar xvf Python-3.9.13.tar.xz
-cd Python-3.9.13.tar.xz
-
-./configure \
-        --enable-shared \
-        --enable-optimizations \
-        --enable-loadable-sqlite-extensions \
-        --disable-ipv6 \
-        --enable-big-digits=30 \
-        --with-ensurepip="upgrade" \
-        --with-lto \
-        --with-assertions \
-        --with-system-ffi
-make -j10
-sudo make install 
-```
-</details>
-
 
 
 
