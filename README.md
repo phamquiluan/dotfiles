@@ -89,6 +89,8 @@ cd vim
 cat src/INSTALL
 
 # ensure vim is compile with clipboard and python3 support 
+vim --version | grep clipboard
+vim --version | grep python
 ```
 </details>
 
