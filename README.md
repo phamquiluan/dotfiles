@@ -1,7 +1,7 @@
 # dotfiles
 An instruction to install a new Linux machine for a Computer Science folk (tested on Debian, Ubuntu 20.04, 21.10, and 22.04)
 
-![image](https://user-images.githubusercontent.com/24642166/219843569-ccbba625-cb48-4c0d-830f-19fda6d1a943.png)
+![image](https://user-images.githubusercontent.com/24642166/219843721-16a31616-27bc-4bcf-b267-f3e0b9765a55.png)
 
 ### (optional) customize partitions during OS installation
 
