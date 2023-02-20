@@ -7,10 +7,11 @@ An instruction to install a new Linux machine for a Computer Science folk (teste
 
 https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-installation
 
-- /root (40GB)
-- /home/user (e.g. /home/luan)
-- /docker 
-- /data (HDD)
+- /root         (40GB, for OS, apps)
+- /home/luan    (40GB, all user dirs would retain if you reinstall OS)
+- /workspaces   (80GB, git repositories, sync with codespaces, retain)
+- /docker       (the rest for /var/lib/docker)
+- /data         (HDD, datasets, films)
 
 
 ### steps:
