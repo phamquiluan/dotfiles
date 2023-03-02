@@ -11,7 +11,6 @@ An instruction to install a new Linux machine for a Computer Science folk (teste
 - [Installation](#installation)
   - [(optional) customize partitions during OS installation](#optional-customize-partitions-during-os-installation)
   - [step-by-step](#step-by-step)
-- [or](#or)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
