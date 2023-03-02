@@ -273,3 +273,10 @@ sudo install skaffold /usr/local/bin/
 
 https://cloud.google.com/sdk/docs/install#deb
 </details>
+  
+  
+  
+# Candidate
+  
+- httpie
+- postman
