@@ -83,11 +83,8 @@ remember to chown -R user:user /home/user
   
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
-
-# update source list to focal
 sudo apt update -y
 
-# install python
 sudo apt-get install -y python3.7 python3.7-dev python3.7-venv
 sudo apt-get install -y python3.8 python3.8-dev python3.8-venv
 sudo apt-get install -y python3.9 python3.9-dev python3.9-venv
@@ -102,14 +99,15 @@ sudo apt-get install -y python3.10 python3.10-dev python3.10-venv
 <details>
 <summary>Compile Vim</summary>
 
+Clone Vim. Read and follow the instruction carefully
 ```
 git clone git@github.com:vim/vim.git
 cd vim
-
-# read
 cat src/INSTALL
+```
 
-# ensure vim is compile with clipboard and python3 support 
+Ensure vim is compile with clipboard and python3 support.
+```bash
 vim --version | grep clipboard
 vim --version | grep python
 ```
@@ -162,16 +160,12 @@ bash ~/.fzf/install --all
 
 Install docker
 ```bash
-# install docker
 curl https://get.docker.com | sh \
   && sudo systemctl --now enable docker
   
-# add user to docker group
 sudo usermod -aG docker $USER
-
-# reboot
-# test by `docker run hello-world` or `docker run ubuntu`
 ```
+Reboot! Test by `docker run hello-world` or `docker run ubuntu`
 
 Install docker nvidia, https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 
@@ -198,10 +192,9 @@ sudo mv mendeleydesktop-1.19.8-linux-x86_64.tar.bz2 /
 sudo tar xvf mendeleydesktop-1.19.8-linux-x86_64.tar.bz2
 cd mendeleydesktop-1.19.8-linux-x86_64
 sudo ./bin/installer....
-  
-# start by
-m 
 ```
+
+start by `m`
 </details>
 
 
