@@ -1,9 +1,18 @@
 # dotfiles
 An instruction to install a new Linux machine for a Computer Science folk (tested on Debian, Ubuntu 20.04, 21.10, and 22.04)
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+# The Landscape
+
 ![image](https://user-images.githubusercontent.com/24642166/219843721-16a31616-27bc-4bcf-b267-f3e0b9765a55.png)
 
-### (optional) customize partitions during OS installation
+# Installation
+
+## (optional) customize partitions during OS installation
 
 https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-installation
 
@@ -14,7 +23,8 @@ https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-ins
 - /data         (HDD, datasets, films)
 
 
-### steps:
+## step-by-step
+
 <details>
 <summary>Update and upgrade</summary>
   
