@@ -8,10 +8,7 @@ An instruction to install a new Linux machine for a Computer Science folk (teste
 - [Installation](#installation)
   - [(optional) customize partitions during OS installation](#optional-customize-partitions-during-os-installation)
   - [step-by-step](#step-by-step)
-- [update source list to focal](#update-source-list-to-focal)
-- [install python](#install-python)
-- [read](#read)
-- [ensure vim is compile with clipboard and python3 support](#ensure-vim-is-compile-with-clipboard-and-python3-support)
+- [or](#or)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
