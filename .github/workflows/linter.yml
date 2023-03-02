@@ -1,0 +1,50 @@
+name: Linter
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: TOC Generator
+      uses: technote-space/toc-generator@v4.0.0
+      with: 
+        TOC_TITLE: ""
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies and run linters
+      run: |
+        git pull || true
+        python -m pip install --upgrade pip pre-commit
+        echo """
+        repos:
+          - repo: https://github.com/pre-commit/mirrors-prettier
+            rev: v2.7.1
+            hooks:
+              - id: prettier
+                types_of: [markdown]
+        """ > .pre-commit-config.yaml
+        pre-commit install 
+        pre-commit run --all-files || true
+    - name: Add and push files into github
+      run: |
+        echo """
+        [credential]
+          helper = store
+        [credential "https://github.com"]
+          username = phamquiluan
+          password = {{ secrets.TOKEN }}
+        """ > ~/.git-credentials
+        chmod 600 ~/.git-credentials
+        git config --global user.email "phamquiluan@gmail.com"
+        git config --global user.name "Luan Pham"        
+        (git add README.md docs && git commit -m "chore(docs): fix styles" && git push) || true
