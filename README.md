@@ -2,6 +2,16 @@
 An instruction to install a new Linux machine for a Computer Science folk (tested on Debian, Ubuntu 20.04, 21.10, and 22.04)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [The Landscape](#the-landscape)
+- [Installation](#installation)
+  - [(optional) customize partitions during OS installation](#optional-customize-partitions-during-os-installation)
+  - [step-by-step](#step-by-step)
+- [update source list to focal](#update-source-list-to-focal)
+- [install python](#install-python)
+- [read](#read)
+- [ensure vim is compile with clipboard and python3 support](#ensure-vim-is-compile-with-clipboard-and-python3-support)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
