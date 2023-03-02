@@ -1,4 +1,7 @@
 # dotfiles
+
+[![Linter](https://github.com/phamquiluan/dotfiles/actions/workflows/linter.yml/badge.svg?branch=master)](https://github.com/phamquiluan/dotfiles/actions/workflows/linter.yml)
+
 An instruction to install a new Linux machine for a Computer Science folk (tested on Debian, Ubuntu 20.04, 21.10, and 22.04)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -127,8 +130,9 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe
 
 python3 install.py --verbose
-
-# or
+```
+or
+```bash
 python3 install.py --go-completer --rust-completer --ts-completer --verbose
 ```
 
