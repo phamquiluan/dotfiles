@@ -281,3 +281,4 @@ https://cloud.google.com/sdk/docs/install#deb
 - httpie
 - postman
 - neovim
+- zsh
