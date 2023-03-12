@@ -282,3 +282,4 @@ https://cloud.google.com/sdk/docs/install#deb
 - postman
 - neovim
 - zsh
+- https://github.com/zsh-users/zsh-autosuggestions
