@@ -185,6 +185,9 @@ Install docker compose, https://docs.docker.com/compose/install/
 - Mendeley
 - Ibus Bamboo
 - Mendeley: https://www.mendeley.com/autoupdates/installers/1.19.8
+- Zotero
+- Team
+- Telegram
   
 ```bash
 wget https://github.com/phamquiluan/dotfiles/releases/download/v0.0.1/mendeleydesktop-1.19.8-linux-x86_64.tar.bz2
