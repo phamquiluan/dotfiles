@@ -285,3 +285,4 @@ https://cloud.google.com/sdk/docs/install#deb
 - postman
 - my-weather-indicator
 - ubuntu my weather indicator
+- zotero
