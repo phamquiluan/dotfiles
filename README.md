@@ -283,6 +283,5 @@ https://cloud.google.com/sdk/docs/install#deb
   
 - httpie
 - postman
-- neovim
-- zsh
-- https://github.com/zsh-users/zsh-autosuggestions
+- my-weather-indicator
+- ubuntu my weather indicator
