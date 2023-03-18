@@ -286,3 +286,4 @@ https://cloud.google.com/sdk/docs/install#deb
 - my-weather-indicator
 - ubuntu my weather indicator
 - zotero
+- wifi adapter driver: https://deb.trendtechcn.com/
