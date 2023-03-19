@@ -47,7 +47,8 @@ sudo apt-get install -y htop git curl unzip \
   libncurses5-dev libxt-dev libx11-dev libxtst-dev \
   libssl-dev libsqlite3-dev libreadline-dev \
   libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
-  build-essential cmake xclip software-properties-common
+  build-essential cmake xclip software-properties-common \
+  rsync tmux ripgrep
 ```
 </details> 
 
