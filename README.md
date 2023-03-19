@@ -289,7 +289,13 @@ https://cloud.google.com/sdk/docs/install#deb
 - my-weather-indicator
 - ubuntu my weather indicator
 - zotero
+  
+  
+# note
 - wifi adapter driver: https://deb.trendtechcn.com/
 - if don't see wifi: check this 
   `sudo mv /usr/lib/firmware/iwlwifi-ty-a0-gf-a0.pnvm  /usr/lib/firmware/iwlwifi-ty-a0-gf-a0.bak` and reboot
                        https://askubuntu.com/questions/1360175/intel-wifi-6-ax210-wifi-not-working-after-update/1360291#1360291
+- if boot time is too slow, use `sudo systemd-analyze blame/critical-chain` can help to detect the root cause.
+- last time, i encountered this bug, the solution is to use `sudo systemctl mask <servicename>.service`
+                       https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=959985
