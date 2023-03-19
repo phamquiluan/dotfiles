@@ -33,7 +33,7 @@ https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-ins
 
 note:
 - using etcher to make bootable usb for debian https://github.com/balena-io/etcher
-- [debian-live-11.6.0-amd64-cinnamon+nonfree.iso](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current-live/amd64/iso-hybrid/)
+- [debian-live-11.6.0-amd64-gnome+nonfree.iso](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current-live/amd64/iso-hybrid/)
 
 ## step-by-step
 
