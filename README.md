@@ -170,6 +170,8 @@ sudo usermod -aG docker $USER
 ```
 Reboot! Test by `docker run hello-world` or `docker run ubuntu`
 
+Change docker image storage location: https://www.ibm.com/docs/en/cloud-private/3.1.1?topic=pyci-specifying-default-docker-storage-directory-by-using-bind-mount
+
 Install docker nvidia, https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 
 Install docker compose, https://docs.docker.com/compose/install/
