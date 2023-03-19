@@ -290,3 +290,6 @@ https://cloud.google.com/sdk/docs/install#deb
 - ubuntu my weather indicator
 - zotero
 - wifi adapter driver: https://deb.trendtechcn.com/
+- if don't see wifi: check this 
+  `sudo mv /usr/lib/firmware/iwlwifi-ty-a0-gf-a0.pnvm  /usr/lib/firmware/iwlwifi-ty-a0-gf-a0.bak` and reboot
+                       https://askubuntu.com/questions/1360175/intel-wifi-6-ax210-wifi-not-working-after-update/1360291#1360291
