@@ -299,4 +299,6 @@ https://cloud.google.com/sdk/docs/install#deb
 - last time, i encountered this bug, the solution is to use `sudo systemctl mask <servicename>.service`
                        https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=959985
 - minimize, maximize button: gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
-   https://askubuntu.com/questions/651347/how-to-bring-back-minimize-and-maximize-buttons-in-gnome-3                     
+   https://askubuntu.com/questions/651347/how-to-bring-back-minimize-and-maximize-buttons-in-gnome-3              
+- USB often auto disconnect (debian bug) https://www.kernel.org/doc/Documentation/usb/power-management.txt
+   https://ywjheart.wordpress.com/2018/07/17/disable-usb-auto-suspend-in-ubuntu-debian/
