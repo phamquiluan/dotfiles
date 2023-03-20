@@ -298,3 +298,5 @@ https://cloud.google.com/sdk/docs/install#deb
 - if boot time is too slow, use `sudo systemd-analyze blame/critical-chain` can help to detect the root cause.
 - last time, i encountered this bug, the solution is to use `sudo systemctl mask <servicename>.service`
                        https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=959985
+- minimize, maximize button: gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+   https://askubuntu.com/questions/651347/how-to-bring-back-minimize-and-maximize-buttons-in-gnome-3                     
