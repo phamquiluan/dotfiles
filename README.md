@@ -2,7 +2,7 @@
 
 [![Linter](https://github.com/phamquiluan/dotfiles/actions/workflows/linter.yml/badge.svg?branch=master)](https://github.com/phamquiluan/dotfiles/actions/workflows/linter.yml)
 
-An instruction to install a new Linux machine for a Computer Science folk (tested on Debian, Ubuntu 20.04, 21.10, and 22.04)
+The instruction to install a my Linux machine (tested on Debian, Ubuntu 20.04, 21.10, and 22.04). Use at your own risk!
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
