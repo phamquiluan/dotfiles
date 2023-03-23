@@ -288,6 +288,7 @@ https://cloud.google.com/sdk/docs/install#deb
 - my-weather-indicator
 - ubuntu my weather indicator
 - zotero
+- https://github.com/Valloric/dotfiles
   
   
 # note
@@ -302,3 +303,5 @@ https://cloud.google.com/sdk/docs/install#deb
    https://askubuntu.com/questions/651347/how-to-bring-back-minimize-and-maximize-buttons-in-gnome-3              
 - USB often auto disconnect (debian bug) https://www.kernel.org/doc/Documentation/usb/power-management.txt
    https://ywjheart.wordpress.com/2018/07/17/disable-usb-auto-suspend-in-ubuntu-debian/
+   
+   
