@@ -303,5 +303,5 @@ https://cloud.google.com/sdk/docs/install#deb
    https://askubuntu.com/questions/651347/how-to-bring-back-minimize-and-maximize-buttons-in-gnome-3              
 - USB often auto disconnect (debian bug) https://www.kernel.org/doc/Documentation/usb/power-management.txt
    https://ywjheart.wordpress.com/2018/07/17/disable-usb-auto-suspend-in-ubuntu-debian/
-- ubuntu goes to grub command line everytime i boot: https://unix.stackexchange.com/questions/329926/grub-starts-in-command-line-after-reboot/330852#330852
+- ubuntu goes to grub command line everytime i boot: need to check wth is going on :)
    
