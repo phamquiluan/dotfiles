@@ -104,7 +104,7 @@ sudo apt-get install -y python3.10 python3.10-dev python3.10-venv
 
 Clone Vim. Read and follow the instruction carefully
 ```
-git clone git@github.com:vim/vim.git
+git clone https://github.com/vim/vim.git
 cd vim
 cat src/INSTALL
 ```
