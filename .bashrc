@@ -140,10 +140,11 @@ if [ -f '/usr/local/bin/aws_completer' ]; then
 fi
 
 # for kubectl completion
-. <(kubectl completion bash)
-alias k=kubectl
-complete -o default -F __start_kubectl k
-
+if type -P command_name >/dev/null; then
+    . <(kubectl completion bash)
+    alias k=kubectl
+    complete -o default -F __start_kubectl k
+fi
 
 # for mendeley
 alias m="cd / && nohup ./mendeleydesktop-1.19.8-linux-x86_64/bin/mendeleydesktop &"
