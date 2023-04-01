@@ -150,7 +150,6 @@ https://github.com/ycm-core/YouCompleteMe#javascript-and-typescript-semantic-com
 <summary>Install FZF</summary>
 
 ```bash
-sudo apt install ripgrep
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 bash ~/.fzf/install --all
 ```
