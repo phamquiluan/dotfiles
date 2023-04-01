@@ -48,7 +48,7 @@ sudo apt-get install -y htop git curl unzip \
   libssl-dev libsqlite3-dev libreadline-dev \
   libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
   build-essential cmake xclip software-properties-common \
-  rsync tmux ripgrep
+  rsync tmux ripgrep gnome-tweaks
 ```
 </details> 
 
