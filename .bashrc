@@ -15,6 +15,10 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 HISTFILESIZE=200000
@@ -127,8 +131,6 @@ fi
 
 bind '"\C-p": previous-history'
 
-# change rate speed
-xset r rate 450 35
 
 # for gpg
 export GPG_TTY=$(tty)
@@ -140,10 +142,10 @@ if [ -f '/usr/local/bin/aws_completer' ]; then
 fi
 
 # for kubectl completion
-if type -P command_name >/dev/null; then
-    . <(kubectl completion bash)
-    alias k=kubectl
-    complete -o default -F __start_kubectl k
+if type -P kubectl >/dev/null; then
+	. <(kubectl completion bash)
+	alias k=kubectl
+	complete -o default -F __start_kubectl k
 fi
 
 # for mendeley
