@@ -306,6 +306,9 @@ https://cloud.google.com/sdk/docs/install#deb
 - USB often auto disconnect (debian bug) https://www.kernel.org/doc/Documentation/usb/power-management.txt
    https://ywjheart.wordpress.com/2018/07/17/disable-usb-auto-suspend-in-ubuntu-debian/
 - ubuntu goes to grub command line everytime i boot: need to check wth is going on :)
+  + boot repair doesn't help 
+  + sudo ls /boot/efi/EFI/ -> it turns out `Debian` was there
+  + sudo rm /boot/efi/EFI/Debian -> fixed it!!!
 - etcher doesn't start? 
   ```bash
   /usr/bin/balena-etcher-electron --disable-gpu-sandbox   
