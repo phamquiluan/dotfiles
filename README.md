@@ -43,7 +43,7 @@ note:
 <summary>Update and upgrade</summary>
   
 ```bash 
-sudo apt-get update -y && sudo apt-get upgrade -y 
+sudo apt-get update -y 
   
 sudo apt-get install -y htop git curl unzip \
   libncurses5-dev libxt-dev libx11-dev libxtst-dev \
