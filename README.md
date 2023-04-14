@@ -21,6 +21,8 @@ The instruction to install a my Linux machine (tested on Debian, Ubuntu 20.04, 2
 
 # Installation
 
+Use [Etcher](https://github.com/balena-io/etcher) to make your USB stick
+
 ## (optional) customize partitions during OS installation
 
 https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-installation
@@ -304,4 +306,7 @@ https://cloud.google.com/sdk/docs/install#deb
 - USB often auto disconnect (debian bug) https://www.kernel.org/doc/Documentation/usb/power-management.txt
    https://ywjheart.wordpress.com/2018/07/17/disable-usb-auto-suspend-in-ubuntu-debian/
 - ubuntu goes to grub command line everytime i boot: need to check wth is going on :)
-   
+- etcher doesn't start? 
+  ```bash
+  /usr/bin/balena-etcher-electron --disable-gpu-sandbox   
+  ```
