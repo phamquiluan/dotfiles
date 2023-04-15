@@ -291,7 +291,7 @@ https://cloud.google.com/sdk/docs/install#deb
 - ubuntu my weather indicator
 - zotero
 - https://github.com/Valloric/dotfiles
-  
+- https://github.com/github/copilot.vim  
   
 # note
 - wifi adapter driver: https://deb.trendtechcn.com/
