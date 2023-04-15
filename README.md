@@ -314,7 +314,7 @@ https://cloud.google.com/sdk/docs/install#deb
   /usr/bin/balena-etcher-electron --disable-gpu-sandbox   
   ```
 - random app doesn't start?
-  + locate it by `locate`, install by `mlocate`
+  + locate it by `locate`, install by `mlocate`, inspect the `.desktop` file can be helpful
   + start it from terminal, hopefully you can catch something 
   ```bash 
   (ins)luan@kitty:~$ /opt/extras.ubuntu.com/my-weather-indicator/bin/my-weather-indicator
