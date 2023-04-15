@@ -313,3 +313,13 @@ https://cloud.google.com/sdk/docs/install#deb
   ```bash
   /usr/bin/balena-etcher-electron --disable-gpu-sandbox   
   ```
+- random app doesn't start?
+  + locate it by `locate`, install by `mlocate`
+  + start it from terminal, hopefully you can catch something 
+  ```bash 
+  (ins)luan@kitty:~$ /opt/extras.ubuntu.com/my-weather-indicator/bin/my-weather-indicator
+  Namespace GeocodeGlib not available
+  Repository version required not present
+  (ins)luan@kitty:~$ sudo apt-get install libgeocode-glib-dev
+  [sudo] password for luan: 
+  ```
