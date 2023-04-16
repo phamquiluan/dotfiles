@@ -86,6 +86,11 @@ let NERDTreeIgnore = ["__pycache__"]
 nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDSpaceDelims = 1
 
+" for copilot
+nnoremap <leader>s :Copilot panel<CR>
+imap <silent><script><expr> <CR> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+imap <silent><script><expr> <C-k> copilot#Next()<CR>
 
 " for YCM, Youcompleteme
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
@@ -100,8 +105,6 @@ let g:ycm_semantic_triggers =  {
   \   "cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go" : [".", "re!\w{2}"],
   \ }
 set completeopt-=preview
-" let g:EclimFileTypeValidate = 0
-" let g:EclimCompletionMethod = "omnifunc"
 let g:ycm_python_binary_path = "python3"
 let g:ycm_disable_for_files_larger_than_kb = 2000
 let g:ycm_key_list_stop_completion = ["<C-y>", "<CR>"]
@@ -110,13 +113,6 @@ let g:ycm_key_invoke_completion = "<C-j>"
 nnoremap ? :YcmCompleter GetDoc<CR>
 nnoremap gt :YcmCompleter GetType<CR>
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-" for netrw sidebar
-let g:netrw_banner = 0
-let g:netrw_liststyle = 0
-let g:netrw_altv = 1
-let g:netrw_winsize = 80
-let g:netrw_browse_split = 2
 
 " for markdown
 let vim_markdown_preview_github=1
