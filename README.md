@@ -292,7 +292,8 @@ https://cloud.google.com/sdk/docs/install#deb
 - zotero
 - https://github.com/Valloric/dotfiles
 - https://github.com/github/copilot.vim  
-  
+- https://github.com/zurawiki/gptcommit
+
 # note
 - wifi adapter driver: https://deb.trendtechcn.com/
 - if don't see wifi: check this 
