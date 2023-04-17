@@ -294,6 +294,7 @@ https://cloud.google.com/sdk/docs/install#deb
 - https://github.com/Valloric/dotfiles
 - https://github.com/github/copilot.vim  
 - https://github.com/zurawiki/gptcommit
+- https://github.com/mzur/gnome-shell-wsmatrix
 
 # note
 - wifi adapter driver: https://deb.trendtechcn.com/
