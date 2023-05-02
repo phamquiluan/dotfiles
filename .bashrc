@@ -156,3 +156,12 @@ if type -P helm >/dev/null; then
 	source <(helm completion bash)
 fi
 
+# for eksctl completion 
+if type -P eksctl >/dev/null; then
+	source <(eksctl completion bash)
+fi
+
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
