@@ -150,3 +150,9 @@ fi
 
 # for mendeley
 alias m="cd / && nohup ./mendeleydesktop-1.19.8-linux-x86_64/bin/mendeleydesktop &"
+
+# for helm completion
+if type -P helm >/dev/null; then
+	source <(helm completion bash)
+fi
+
