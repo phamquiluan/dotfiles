@@ -87,10 +87,11 @@ nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDSpaceDelims = 1
 
 " for copilot
-nnoremap <leader>s :Copilot panel<CR>
-imap <silent><script><expr> <CR> copilot#Accept("\<CR>")
-let g:copilot_no_tab_map = v:true
 imap <silent><script><expr> <C-k> copilot#Next()<CR>
+let g:copilot_filetypes = {
+  \  'python': v:true,
+  \  'yaml': v:true,
+  \}
 
 " for YCM, Youcompleteme
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
@@ -113,6 +114,7 @@ let g:ycm_key_invoke_completion = "<C-j>"
 nnoremap ? :YcmCompleter GetDoc<CR>
 nnoremap gt :YcmCompleter GetType<CR>
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap rn :YcmCompleter RefactorRename 
 
 " for markdown
 let vim_markdown_preview_github=1
