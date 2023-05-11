@@ -45,6 +45,7 @@ Plugin 'ekalinin/dockerfile.vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }
+Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Vimjas/vim-python-pep8-indent'
@@ -87,11 +88,16 @@ nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDSpaceDelims = 1
 
 " for copilot
+nnoremap <leader>s :Copilot panel<CR>
 imap <silent><script><expr> <C-k> copilot#Next()<CR>
+
 let g:copilot_filetypes = {
-  \  'python': v:true,
-  \  'yaml': v:true,
-  \}
+  \ '*': v:false,
+  \ 'python': v:true,
+  \ 'yaml': v:true,
+  \ 'yml': v:true,
+  \ 'md': v:true,
+  \ }
 
 " for YCM, Youcompleteme
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
