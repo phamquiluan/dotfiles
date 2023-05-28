@@ -93,11 +93,17 @@ imap <silent><script><expr> <C-k> copilot#Next()<CR>
 
 let g:copilot_filetypes = {
   \ '*': v:false,
+  \ 'Dockerfile': v:true,
   \ 'python': v:true,
+  \ 'json': v:true,
   \ 'yaml': v:true,
   \ 'yml': v:true,
+  \ 'txt': v:true,
+  \ 'sh': v:true,
   \ 'md': v:true,
   \ }
+
+
 
 " for YCM, Youcompleteme
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
@@ -166,7 +172,8 @@ hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black
 
 autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab 
+" autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
 autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
 autocmd VimResized * wincmd =
 
