@@ -311,7 +311,7 @@ https://github.com/weaveworks/eksctl/blob/main/README.md#installation
 - https://github.com/mzur/gnome-shell-wsmatrix
 - curl -sS https://webi.sh/k9s | sh
 - https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/
-  
+- https://github.com/vladimirvivien/ktop  
   
 # note
 - wifi adapter driver: https://deb.trendtechcn.com/
