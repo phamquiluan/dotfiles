@@ -86,6 +86,7 @@ let $FZF_DEFAULT_COMMAND = "rg --files --hidden"
 let NERDTreeIgnore = ["__pycache__"]
 nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDSpaceDelims = 1
+nmap <leader>r :NERDTreeFind<cr>
 
 " for copilot
 nnoremap <leader>s :Copilot panel<CR>
