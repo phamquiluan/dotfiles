@@ -284,6 +284,11 @@ sudo install skaffold /usr/local/bin/
 https://cloud.google.com/sdk/docs/install#deb
 </details>
   
+<details>
+<summary>Install eksctl</summary>
+
+https://github.com/weaveworks/eksctl/blob/main/README.md#installation  
+</details>
   
   
 # Candidate
