@@ -290,6 +290,14 @@ https://cloud.google.com/sdk/docs/install#deb
 https://github.com/weaveworks/eksctl/blob/main/README.md#installation  
 </details>
   
+<details>
+<summary>Install k9s</summary>
+
+  ```
+     curl -sS https://webinstall.dev/k9s | bash
+  ```
+  https://github.com/derailed/k9s
+</details>  
   
 # Candidate
   
