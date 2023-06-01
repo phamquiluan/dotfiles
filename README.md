@@ -33,8 +33,7 @@ https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-ins
 - /  # the rest for os
 - /data         (HDD, datasets, films)
 
-note:
-- using etcher to make bootable usb for debian https://github.com/balena-io/etcher
+ISO download url:
 - [debian-live-11.6.0-amd64-gnome+nonfree.iso](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current-live/amd64/iso-hybrid/)
 
 ## step-by-step
@@ -85,13 +84,12 @@ remember to chown -R user:user /home/user
 
 
 <details>
-<summary>Install Python from 3.7 to 3.11</summary>
+<summary>Install Python from 3.8 to 3.11</summary>
   
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update -y
 
-sudo apt-get install -y python3.7 python3.7-dev python3.7-venv
 sudo apt-get install -y python3.8 python3.8-dev python3.8-venv
 sudo apt-get install -y python3.9 python3.9-dev python3.9-venv
 sudo apt-get install -y python3.10 python3.10-dev python3.10-venv
@@ -298,18 +296,20 @@ https://github.com/weaveworks/eksctl/blob/main/README.md#installation
   https://github.com/derailed/k9s
 </details>  
   
+<details>
+<summary>Install Vim Copilot</summary>
+  
+  https://github.com/github/copilot.vim
+</details>  
+  
+  
 # Candidate
   
-- httpie
-- postman
 - my-weather-indicator
 - ubuntu my weather indicator
 - zotero
 - https://github.com/Valloric/dotfiles
-- https://github.com/github/copilot.vim  
-- https://github.com/zurawiki/gptcommit
 - https://github.com/mzur/gnome-shell-wsmatrix
-- curl -sS https://webi.sh/k9s | sh
 - https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/
 - https://github.com/vladimirvivien/ktop  
   
