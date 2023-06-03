@@ -99,6 +99,7 @@ let g:copilot_filetypes = {
   \ 'json': v:true,
   \ 'yaml': v:true,
   \ 'yml': v:true,
+  \ 'text': v:true,
   \ 'txt': v:true,
   \ 'sh': v:true,
   \ 'md': v:true,
