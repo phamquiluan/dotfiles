@@ -11,6 +11,8 @@ The instruction to install a my Linux machine (tested on Debian, Ubuntu 20.04, 2
 - [Installation](#installation)
   - [(optional) customize partitions during OS installation](#optional-customize-partitions-during-os-installation)
   - [step-by-step](#step-by-step)
+- [Candidate](#candidate)
+- [note](#note)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
