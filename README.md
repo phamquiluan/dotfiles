@@ -299,9 +299,9 @@ https://github.com/weaveworks/eksctl/blob/main/README.md#installation
 <details>
 <summary>Install Vim Copilot</summary>
 
-  https://github.com/nodesource/distributions
-  https://github.com/nvm-sh/nvm  
-  https://github.com/github/copilot.vim
+  - https://github.com/nodesource/distributions
+  - https://github.com/nvm-sh/nvm  
+  - https://github.com/github/copilot.vim
 </details>  
   
   
