@@ -103,6 +103,7 @@ let g:copilot_filetypes = {
   \ 'txt': v:true,
   \ 'sh': v:true,
   \ 'md': v:true,
+  \ 'gitignore': v:true,
   \ }
 
 
@@ -174,7 +175,7 @@ hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black
 
 autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0#
 " autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
 autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
 autocmd VimResized * wincmd =
