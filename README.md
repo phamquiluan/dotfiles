@@ -327,6 +327,8 @@ https://github.com/weaveworks/eksctl/blob/main/README.md#installation
 - https://github.com/mzur/gnome-shell-wsmatrix
 - https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/
 - https://github.com/vladimirvivien/ktop  
+- https://github.com/BambooEngine/ibus-bamboo
+
   
 # note
 - wifi adapter driver: https://deb.trendtechcn.com/
