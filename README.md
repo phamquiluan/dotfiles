@@ -361,3 +361,4 @@ https://github.com/weaveworks/eksctl/blob/main/README.md#installation
   (ins)luan@kitty:~$ sudo apt-get install libgeocode-glib-dev
   [sudo] password for luan: 
   ```
+- sudo apt list --upgradable / sudo apt install --only-upgrade code
