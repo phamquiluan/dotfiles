@@ -298,7 +298,7 @@ https://cloud.google.com/sdk/docs/install#deb
 <details>
 <summary>Install eksctl</summary>
 
-https://github.com/weaveworks/eksctl/blob/main/README.md#installation  
+https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
 </details>
   
 <details>
