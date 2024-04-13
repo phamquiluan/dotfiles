@@ -86,7 +86,7 @@ remember to chown -R user:user /home/user
 
 
 <details>
-<summary>Install Python from 3.8 to 3.11</summary>
+<summary>Install Python from 3.8 to 3.12</summary>
   
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
