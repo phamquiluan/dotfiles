@@ -361,3 +361,8 @@ https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
   [sudo] password for luan: 
   ```
 - sudo apt list --upgradable / sudo apt install --only-upgrade code
+
+
+# Macbook note
+
+in .bashrc, need to have `export SHELL="/bin/bash"`, because tmux will look for this env var to create the shell, default is /bin/zsh
