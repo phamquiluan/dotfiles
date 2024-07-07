@@ -13,6 +13,7 @@ The instruction to install a my Linux machine (tested on Debian, Ubuntu 20.04, 2
   - [step-by-step](#step-by-step)
 - [Candidate](#candidate)
 - [note](#note)
+- [Macbook note](#macbook-note)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
