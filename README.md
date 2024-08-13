@@ -369,3 +369,5 @@ https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
 in .bashrc, need to have `export SHELL="/bin/bash"`, because tmux will look for this env var to create the shell, default is /bin/zsh
 
 make the key repeat faster: https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x
+
+tmux alt 2: https://superuser.com/questions/649960/option-key-does-not-work-as-meta-in-tmux
