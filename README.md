@@ -367,3 +367,5 @@ https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
 # Macbook note
 
 in .bashrc, need to have `export SHELL="/bin/bash"`, because tmux will look for this env var to create the shell, default is /bin/zsh
+
+make the key repeat faster: https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x
