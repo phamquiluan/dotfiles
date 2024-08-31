@@ -110,6 +110,8 @@ Clone Vim. Read and follow the instruction carefully
 git clone https://github.com/vim/vim.git
 cd vim
 cat src/INSTALL
+
+./configure --prefix=$HOME/.local
 ```
 
 Ensure vim is compile with clipboard and python3 support.
