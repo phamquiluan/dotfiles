@@ -163,6 +163,19 @@ chmod +x $HOME/.local/bin/rg
 ```
 </details>
  
+
+<details> 
+<summary>Install tree without sudo</summary>
+
+```bash
+cd $HOME/.local/bin/
+apt download tree
+dpkg-deb -xv ./*deb ./
+cp ./usr/bin/tree .
+chmod +x tree
+```
+</details>
+ 
  
 <details> 
 <summary>Install FZF</summary>
