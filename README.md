@@ -157,7 +157,7 @@ https://github.com/ycm-core/YouCompleteMe#javascript-and-typescript-semantic-com
 ```bash
 curl -LO 'https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz'
 tar xvf ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz
-cd ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz
+cd ripgrep-14.1.0-x86_64-unknown-linux-musl
 cp rg $HOME/.local/bin
 chmod +x $HOME/.local/bin/rg
 ```
