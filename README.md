@@ -361,6 +361,7 @@ https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
 
   
 # note
+- In MacOS, up arrow and Ctrl + up arrow send the same signal: https://superuser.com/questions/660013/resizing-pane-is-not-working-for-tmux-on-mac
 - wifi adapter driver: https://deb.trendtechcn.com/
 - if don't see wifi: check this 
   `sudo mv /usr/lib/firmware/iwlwifi-ty-a0-gf-a0.pnvm  /usr/lib/firmware/iwlwifi-ty-a0-gf-a0.bak` and reboot
