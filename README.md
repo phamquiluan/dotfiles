@@ -280,6 +280,7 @@ chmod 700 get_helm.sh
 
 - `helm plugin install https://github.com/databus23/helm-diff`
 - Download the amd linux version from https://github.com/helmfile/helmfile/releases
+- `curl -L -o helmfile_1.0.0-rc.5_linux_amd64.tar.gz https://github.com/helmfile/helmfile/releases/download/v1.0.0-rc.5/helmfile_1.0.0-rc.5_linux_amd64.tar.gz`
 - untar, `sudo mv helmfile /usr/local/bin/`
 - `sudo chmod +x /usr/local/bin/helmfile`
 
