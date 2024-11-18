@@ -95,7 +95,7 @@ sudo apt update -y
 
 sudo apt-get install -y python3.8 python3.8-dev python3.8-venv
 sudo apt-get install -y python3.10 python3.10-dev python3.10-venv
-sudo apt-get install -y python3.12 python3.11-dev python3.12-venv
+sudo apt-get install -y python3.12 python3.12-dev python3.12-venv
 ```
 </details>
 
