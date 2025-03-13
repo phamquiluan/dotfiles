@@ -9,7 +9,7 @@ RUN apt-get update -y && \
     htop git curl unzip \
     libncurses5-dev libxt-dev libx11-dev libxtst-dev \
     libssl-dev libsqlite3-dev libreadline-dev \
-    libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
+    libtk8.6 libgdm-dev libpcap-dev \
     build-essential cmake xclip software-properties-common \
     rsync tmux ripgrep gnome-tweaks clang libtool-bin \
     libpython3-dev python3-pip
@@ -26,7 +26,7 @@ RUN add-apt-repository ppa:deadsnakes/ppa -y && \
 RUN git clone https://github.com/vim/vim.git /tmp/vim && \
     cd /tmp/vim && \
     ./configure --prefix=$HOME/.local --with-features=huge --enable-python3interp=yes && \
-    make && \
+    make -j8 && \
     make install
 
 # Verify Vim compilation
