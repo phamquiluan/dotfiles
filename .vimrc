@@ -7,6 +7,7 @@ set mouse-=a
 filetype off
 set tabstop=4
 set shiftwidth=4
+set encoding=utf-8
 set shell=/bin/bash
 set clipboard=unnamedplus " using system clipboard
 set hlsearch
