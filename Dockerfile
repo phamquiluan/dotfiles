@@ -1,0 +1,70 @@
+FROM ubuntu:latest
+
+# Set environment variables to avoid interactive prompts during package installation
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install necessary dependencies
+RUN apt-get update -y && \
+    apt-get install -y \
+    htop git curl unzip \
+    libncurses5-dev libxt-dev libx11-dev libxtst-dev \
+    libssl-dev libsqlite3-dev libreadline-dev \
+    libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
+    build-essential cmake xclip software-properties-common \
+    rsync tmux ripgrep gnome-tweaks clang libtool-bin \
+    libpython3-dev python3-pip
+
+# Install Python versions (3.8, 3.10, 3.12)
+RUN add-apt-repository ppa:deadsnakes/ppa -y && \
+    apt-get update -y && \
+    apt-get install -y \
+    python3.8 python3.8-dev python3.8-venv \
+    python3.10 python3.10-dev python3.10-venv \
+    python3.12 python3.12-dev python3.12-venv
+
+# Clone and compile Vim with Python support
+RUN git clone https://github.com/vim/vim.git /tmp/vim && \
+    cd /tmp/vim && \
+    ./configure --prefix=$HOME/.local --with-features=huge --enable-python3interp=yes && \
+    make && \
+    make install
+
+# Verify Vim compilation
+RUN $HOME/.local/bin/vim --version | grep clipboard && \
+    $HOME/.local/bin/vim --version | grep python
+
+# Clone dotfiles repository
+RUN git clone https://github.com/phamquiluan/dotfiles.git $HOME/dotfiles
+
+# Copy dotfiles to the home directory
+RUN cp $HOME/dotfiles/.bashrc $HOME/.bashrc && \
+    cp $HOME/dotfiles/.bash_aliases $HOME/.bash_aliases && \
+    cp $HOME/dotfiles/.vimrc $HOME/.vimrc && \
+    cp $HOME/dotfiles/.ycm_extra_conf.py $HOME/.ycm_extra_conf.py && \
+    cp $HOME/dotfiles/.inputrc $HOME/.inputrc && \
+    cp $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
+
+# Install Vundle and Vim plugins
+RUN git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim && \
+    $HOME/.local/bin/vim +PluginInstall +qall
+
+# Install YouCompleteMe with all completers
+RUN cd $HOME/.vim/bundle/YouCompleteMe && \
+    python3 install.py --verbose
+
+# Install FZF
+RUN git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf && \
+    $HOME/.fzf/install --all
+
+# Clean up
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Set the default shell to bash
+ENV SHELL=/bin/bash
+
+# Set the working directory
+WORKDIR /ws
+
+# Start a shell session
+CMD ["bash"]
