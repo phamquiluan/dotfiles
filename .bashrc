@@ -166,4 +166,4 @@ fi
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 
-xset r rate 200 60
+# xset r rate 200 60
