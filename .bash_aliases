@@ -1,5 +1,5 @@
-alias l="ls -1"
-alias ll="ls -l"
+alias l="ls -1 --color=always"
+alias ll="ls -l --color=always"
 alias cl="clear"
 alias open="xdg-open"
 alias vi="vim"
