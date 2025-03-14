@@ -25,13 +25,22 @@ RUN add-apt-repository ppa:deadsnakes/ppa -y && \
 # Clone and compile Vim with Python support
 RUN git clone https://github.com/vim/vim.git /tmp/vim && \
     cd /tmp/vim && \
-    ./configure --prefix=$HOME/.local --with-features=huge --enable-python3interp=yes && \
+    ./configure --prefix=/usr/local --with-features=huge --enable-python3interp=yes && \
     make -j8 && \
     make install
 
 # Verify Vim compilation
-RUN $HOME/.local/bin/vim --version | grep clipboard && \
-    $HOME/.local/bin/vim --version | grep python
+RUN vim --version | grep clipboard && \
+    vim --version | grep python
+
+# Install FZF
+RUN git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf && \
+    $HOME/.fzf/install --all
+
+# Clean up
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 
 # Clone dotfiles repository
 RUN git clone https://github.com/phamquiluan/dotfiles.git $HOME/dotfiles
@@ -46,22 +55,17 @@ RUN cp $HOME/dotfiles/.bashrc $HOME/.bashrc && \
 
 # Install Vundle and Vim plugins
 RUN git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim && \
-    $HOME/.local/bin/vim +PluginInstall +qall
+    vim +PluginInstall +qall
 
 # Install YouCompleteMe with all completers
 RUN cd $HOME/.vim/bundle/YouCompleteMe && \
-    python3 install.py --verbose
+    python3 install.py --verbose --force-sudo
 
-# Install FZF
-RUN git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf && \
-    $HOME/.fzf/install --all
-
-# Clean up
-RUN apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Set the default shell to bash
 ENV SHELL=/bin/bash
+RUN git config --global user.email "phamquiluan@gmail.com" && \
+	  git config --global user.name "Luan Pham"
 
 # Set the working directory
 WORKDIR /ws
