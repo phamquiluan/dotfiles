@@ -1,5 +1,6 @@
 # dotfiles
 
+[![Build and Publish Docker image](https://github.com/phamquiluan/dotfiles/actions/workflows/docker-build-and-push.yml/badge.svg)](https://github.com/phamquiluan/dotfiles/actions/workflows/docker-build-and-push.yml)
 [![Linter](https://github.com/phamquiluan/dotfiles/actions/workflows/linter.yml/badge.svg?branch=master)](https://github.com/phamquiluan/dotfiles/actions/workflows/linter.yml)
 
 The instruction to install a my Linux machine (tested on Debian, Ubuntu 20.04, 21.10, and 22.04). Use at your own risk!
