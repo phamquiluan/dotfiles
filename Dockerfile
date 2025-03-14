@@ -65,7 +65,9 @@ RUN cd $HOME/.vim/bundle/YouCompleteMe && \
 # Set the default shell to bash
 ENV SHELL=/bin/bash
 RUN git config --global user.email "phamquiluan@gmail.com" && \
-	  git config --global user.name "Luan Pham"
+	  git config --global user.name "Luan Pham" && \
+	  git config --global alias.ci commit 
+
 
 # Set the working directory
 WORKDIR /ws
