@@ -402,3 +402,10 @@ in .bashrc, need to have `export SHELL="/bin/bash"`, because tmux will look for 
 make the key repeat faster: https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x
 
 tmux alt 2: https://superuser.com/questions/649960/option-key-does-not-work-as-meta-in-tmux
+
+you can develop with Linux within Mac using docker
+```
+docker pull phamquiluan/dev:latest
+docker tag phamquiluan/dev:latest dev:latest
+docker run --platform linux/amd64 -v $HOME/ws:/ws -it dev:latest
+```  
