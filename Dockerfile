@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install necessary dependencies
 RUN apt-get update -y && \
     apt-get install -y \
-    htop git curl unzip \
+    htop git curl wget unzip \
     libncurses5-dev libxt-dev libx11-dev libxtst-dev \
     libssl-dev libsqlite3-dev libreadline-dev \
     libtk8.6 libgdm-dev libpcap-dev \
