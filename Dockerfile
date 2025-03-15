@@ -61,6 +61,14 @@ RUN git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vund
 RUN cd $HOME/.vim/bundle/YouCompleteMe && \
     python3 install.py --verbose --force-sudo
 
+# Install Vim Copilot
+RUN curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh && \
+	bash nodesource_setup.sh && \
+	apt-get install -y nodejs
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+RUN git clone https://github.com/github/copilot.vim.git \
+  ~/.vim/pack/github/start/copilot.vim
+
 
 # Set the default shell to bash
 ENV SHELL=/bin/bash
