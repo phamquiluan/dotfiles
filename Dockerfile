@@ -76,6 +76,7 @@ RUN git config --global user.email "phamquiluan@gmail.com" && \
 	  git config --global user.name "Luan Pham" && \
 	  git config --global alias.ci commit 
 
+RUN mkdir -p /root/.local/share
 
 # Set the working directory
 WORKDIR /ws
