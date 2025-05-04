@@ -12,7 +12,7 @@ RUN apt-get update -y && \
     libtk8.6 libgdm-dev libpcap-dev \
     build-essential cmake xclip software-properties-common \
     rsync tmux ripgrep gnome-tweaks clang libtool-bin \
-    libpython3-dev python3-pip tldr zip poppler-utils tree jq
+    libpython3-dev python3-pip tldr zip poppler-utils tree jq man-db
 
 # Install Python versions (3.8, 3.10, 3.12)
 RUN add-apt-repository ppa:deadsnakes/ppa -y && \
