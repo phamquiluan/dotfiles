@@ -22,6 +22,9 @@ RUN add-apt-repository ppa:deadsnakes/ppa -y && \
     python3.10 python3.10-dev python3.10-venv \
     python3.12 python3.12-dev python3.12-venv
 
+# Unminize for man pages
+RUN yes | unminimize
+
 # Clone and compile Vim with Python support
 RUN git clone https://github.com/vim/vim.git /tmp/vim && \
     cd /tmp/vim && \
