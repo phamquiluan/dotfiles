@@ -409,3 +409,5 @@ docker pull phamquiluan/dev:latest
 docker tag phamquiluan/dev:latest dev:latest
 docker run --platform linux/amd64 -v $HOME/ws:/ws -it dev:latest
 ```  
+
+[tmux on macOS - copy to system clipboard](https://www.jdeen.com/blog/tmux-on-macos-copy-to-system-clipboard)
