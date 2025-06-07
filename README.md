@@ -397,6 +397,8 @@ https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
 
 # Macbook note
 
+https://github.com/pyenv/pyenv?tab=readme-ov-file#macos
+
 vi-mode in python  https://docs.python.org/3/library/readline.html
 
 ```
