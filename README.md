@@ -350,7 +350,8 @@ https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
   
   
 # Candidate
-  
+
+- https://github.com/stevearc/oil.nvim (TODO: need to check)
 - my-weather-indicator
 - ubuntu my weather indicator
 - zotero
@@ -362,6 +363,7 @@ https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
 
   
 # note
+
 - In MacOS, up arrow and Ctrl + up arrow send the same signal: https://superuser.com/questions/660013/resizing-pane-is-not-working-for-tmux-on-mac
 - wifi adapter driver: https://deb.trendtechcn.com/
 - if don't see wifi: check this 
