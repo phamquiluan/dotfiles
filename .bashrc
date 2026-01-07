@@ -126,6 +126,12 @@ export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
 # Enable default virtual environment if there is one
 if [ -f env/bin/activate ]; then
 	source env/bin/activate
+elif [ -f venv/bin/activate ]; then
+	source venv/bin/activate
+elif [ -f .venv/bin/activate ]; then
+	source .venv/bin/activate
+elif [ -f .env/bin/activate ]; then
+	source .env/bin/activate
 fi
 
 
@@ -166,4 +172,19 @@ fi
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 
-# xset r rate 200 60
+PATH="/opt/homebrew/opt/libtool/libexec/gnubin:$PATH"
+# alias python=python3.12
+
+
+export SHELL="/bin/bash"
+
+if [ -f ~/.git-completion.bash  ]; then
+	. ~/.git-completion.bash
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# uv
+export PATH="/Users/luanpham/.local/bin:$PATH"
