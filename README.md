@@ -397,6 +397,17 @@ https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
 - sudo apt list --upgradable / sudo apt install --only-upgrade code
 
 
+# Claude Code Skills
+
+This repo includes Claude Code skills in the `skills/` directory. To use them:
+
+```bash
+ln -s ~/ws/dotfiles/skills ~/.claude/skills
+```
+
+Available skills:
+- `academic-writing` - Writing style guide for top-tier CS venues (ICSE, FSE, ASE, ICML, NeurIPS)
+
 # Macbook note
 
 https://github.com/pyenv/pyenv?tab=readme-ov-file#macos
