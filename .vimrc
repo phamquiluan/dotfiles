@@ -9,7 +9,7 @@ set tabstop=4
 set shiftwidth=4
 set encoding=utf-8
 set shell=/bin/bash
-set clipboard=unnamedplus " using system clipboard
+set clipboard=unnamed " using system clipboard
 set hlsearch
 set incsearch
 set linebreak
@@ -95,12 +95,17 @@ imap <silent><script><expr> <C-k> copilot#Next()<CR>
 
 let g:copilot_filetypes = {
   \ '*': v:false,
+  \ 'html': v:true,
+  \ 'tex': v:true,
+  \ 'make': v:true,
   \ 'Dockerfile': v:true,
+  \ 'Makefile': v:true,
   \ 'python': v:true,
   \ 'json': v:true,
   \ 'yaml': v:true,
   \ 'yml': v:true,
   \ 'text': v:true,
+  \ 'toml': v:true,
   \ 'txt': v:true,
   \ 'sh': v:true,
   \ 'md': v:true,
