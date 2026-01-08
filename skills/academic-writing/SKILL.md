@@ -5,7 +5,35 @@ description: Write and edit academic papers for top-tier CS venues (ICSE, FSE, A
 
 # Academic Writing Skill
 
-Use this skill when writing or editing academic content for software engineering and machine learning conferences. Follow these patterns rigorously.
+Use this skill when writing or editing academic content for software engineering and machine learning conferences.
+
+## Conservative Editing Philosophy
+
+**Principle: Minimal intervention.** Only change what is actually problematic. The author's voice and intentional choices take precedence over style preferences.
+
+**Before making any change, ask:**
+1. Is this actually wrong, or just different from my preference?
+2. Could this be an intentional stylistic choice?
+3. Does this change improve clarity, or just impose a different style?
+
+**Preserve author intent:**
+- Keep word choices the author uses consistently (e.g., "merely", "significantly")
+- Keep structural patterns the author has established
+- Keep rhetorical devices like strategic repetition
+
+**Strategic repetition is valid.** Repetition for emphasis differs from redundancy:
+- **Keep:** Repeating a key thesis statement in both the response intro and the quoted paper text (reinforces the main point)
+- **Keep:** Parallel structure that repeats phrases for rhetorical effect
+- **Remove:** Saying the same thing twice with no added emphasis or clarity
+
+## Workflow Behavior
+
+1. **Scope the request:** Identify what specific issues exist in the text. Do not invent problems.
+2. **Categorize issues:** Separate actual errors (grammar, unclear meaning) from style preferences
+3. **Present minimal changes:** Only propose changes for actual issues, not style preferences
+4. **Preserve author choices:** If something could be intentional, assume it is
+5. **Ask before restructuring:** For structural changes, ask: "Would you like me to restructure X, or keep the current structure?"
+6. **Apply edits only when approved**
 
 ## Voice and Sentence Structure
 
@@ -21,7 +49,7 @@ Use this skill when writing or editing academic content for software engineering
 **Sentence length:**
 - Short sentences for key claims: "This approach fails when the graph is unknown."
 - Longer sentences for technical explanations with embedded clauses
-- Avoid run-on sentences. Split into separate sentences instead
+- Split run-on sentences only when they impede comprehension
 
 ## Abstract Structure (6 Parts)
 
@@ -72,11 +100,6 @@ Use this skill when writing or editing academic content for software engineering
 - Generalizations beyond experimental scope
 - Theoretical implications not fully proven
 
-**Examples:**
-- "This suggests that structural knowledge may not be necessary..."
-- "The performance degradation likely results from..."
-- "These findings indicate that..."
-
 ## Transition Phrases
 
 | Function | Phrases |
@@ -99,9 +122,7 @@ Use this skill when writing or editing academic content for software engineering
 
 **References:** Use `Eq.~\ref{eq:name}` or `Equation~\ref{eq:name}`
 
-**Never orphan equations** — always embed in narrative flow.
-
-**Displayed equations:** Use for important formulas that will be referenced or that define key quantities.
+**Displayed equations:** Use for important formulas that will be referenced.
 
 ## Citations
 
@@ -111,9 +132,6 @@ Use this skill when writing or editing academic content for software engineering
 
 **Group by topic:**
 - "...has been explored in microservices~\cite{a,b,c} and cloud systems~\cite{d,e}."
-
-**With evaluation:**
-- "As demonstrated in~\cite{hardt2024}, this approach struggles with..."
 
 **Citation placement:** Make clear what is being cited
 - Good: "Prior work using mean and standard deviation~\cite{Li2022Circa} can degrade..."
@@ -159,19 +177,21 @@ Use this skill when writing or editing academic content for software engineering
 - "Proves" for empirical results (use "demonstrates" or "shows")
 - "Novel" / "Innovative" without substantiation
 - First person singular "I" (use "we" even for single author)
-- Em-dashes (`---`) for parenthetical statements. Use commas or separate sentences instead
-- Semicolons (`;`) in prose. Split into separate sentences instead
-- Colons (`:`) in prose for introducing clauses. Reserve for lists, definitions, and mathematical notation
+
+## Punctuation Guidelines
+
+**Prefer avoiding when possible, but do not mechanically replace:**
+- Em-dashes (`---`): Often better as commas or separate sentences, but acceptable for strong parenthetical emphasis
+- Semicolons: Often better as separate sentences, but acceptable for closely related independent clauses
+- Colons in prose: Reserve primarily for lists, definitions, and mathematical notation
 
 ## Common Revision Patterns
 
-| Before | After |
-|--------|-------|
-| Run-on sentence with multiple clauses | Split into 2-3 shorter sentences |
-| "which better assists..." | "This helps... more effectively" |
-| "This formulation follows..." | "[Method] performs..." (active voice) |
-| "A recent work has theoretically proved" | "Recent theoretical work proves" |
-| "are consolidated to yield" | "we aggregate... to obtain" |
-| "may be significantly affected" | "can degrade" (specific effect) |
-| Long parenthetical "(i.e., the time series data corresponding to each metric, log template, or trace)" | Short "(i.e., metric, log template, or trace)" |
-| Repeating "time series $x$" multiple times | "let $x$ denote its time series" then use $x$ |
+Apply these only when they improve clarity, not mechanically:
+
+| Pattern | When to Apply |
+|---------|---------------|
+| Split long sentences | Only if comprehension is impeded |
+| Convert passive to active | Only if the actor matters for understanding |
+| Shorten parentheticals | Only if they interrupt flow significantly |
+| Introduce variables | Only if the same term appears 3+ times in close proximity |
