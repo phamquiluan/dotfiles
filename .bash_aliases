@@ -1,9 +1,9 @@
 alias l="ls -1 --color=always"
 alias ll="ls -l --color=always"
 alias cl="clear"
-alias open="xdg-open"
 alias vi="vim"
 alias py="python"
+# alias python="python3.12"
 alias i="ipython3 --TerminalInteractiveShell.editing_mode=vi"
 alias tm="tmux"
 alias ta="tmux a -t"
@@ -22,3 +22,16 @@ alias gpush="git push "
 
 # for conda
 alias ca="conda activate"
+
+# tmux session completion for ta alias
+_ta_complete() {
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+    local session
+    COMPREPLY=()
+    while IFS= read -r session; do
+        if [[ "$session" == "$cur"* ]]; then
+            COMPREPLY+=("$session")
+        fi
+    done < <(tmux list-sessions -F '#{session_name}' 2>/dev/null)
+}
+complete -F _ta_complete ta
