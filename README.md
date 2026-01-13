@@ -16,6 +16,7 @@ The instruction to install a my Linux machine (tested on Debian, Ubuntu 20.04, 2
 - [note](#note)
 - [Claude Code Skills](#claude-code-skills)
 - [Macbook note](#macbook-note)
+  - [Tmux Status Bar Scripts](#tmux-status-bar-scripts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
