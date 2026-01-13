@@ -411,6 +411,19 @@ Available skills:
 
 # Macbook note
 
+## Tmux Status Bar Scripts
+
+Install CPU/MEM and weather scripts for tmux status bar (macOS only):
+
+```bash
+mkdir -p ~/.local/bin
+cp bin/sysstat.sh ~/.local/bin/
+cp bin/weather.sh ~/.local/bin/
+chmod +x ~/.local/bin/*.sh
+```
+
+To change weather location, set `WEATHER_LOCATION` env var (default: Melbourne).
+
 https://github.com/pyenv/pyenv?tab=readme-ov-file#macos
 
 vi-mode in python  https://docs.python.org/3/library/readline.html
