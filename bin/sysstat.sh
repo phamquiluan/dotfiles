@@ -5,11 +5,10 @@
 CORES=$(sysctl -n hw.ncpu)
 CPU=$(ps -A -o %cpu | awk -v cores="$CORES" '{sum+=$1} END {printf "%.0f", sum/cores}')
 
-# Memory usage (matches htop: active + wired - purgeable)
+# Memory usage as percentage
 TOTAL_BYTES=$(sysctl -n hw.memsize)
-TOTAL_GB=$(echo "scale=1; $TOTAL_BYTES/1024/1024/1024" | bc)
 
-USED_GB=$(vm_stat | awk '
+MEM_PCT=$(vm_stat | awk -v total_bytes="$TOTAL_BYTES" '
 /page size/ { page_size = $8 }
 /Pages active/ { active = $3 }
 /Pages wired/ { wired = $4 }
@@ -18,8 +17,8 @@ END {
     gsub(/\./, "", active)
     gsub(/\./, "", wired)
     gsub(/\./, "", purgeable)
-    used = (active + wired - purgeable) * page_size / 1024 / 1024 / 1024
-    printf "%.2f", used
+    used_bytes = (active + wired - purgeable) * page_size
+    printf "%.0f", (used_bytes / total_bytes) * 100
 }')
 
-echo "CPU:${CPU}% MEM:${USED_GB}G/${TOTAL_GB}G"
+echo "CPU:${CPU}% MEM:${MEM_PCT}%"
