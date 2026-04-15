@@ -45,7 +45,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }
+" Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }  " skipped for now
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -182,6 +182,7 @@ hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black
 if &diff
 	colorscheme desert
 endif
+autocmd VimEnter,WinEnter * if &diff | setlocal wrap linebreak | endif
 
 autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
