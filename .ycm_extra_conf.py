@@ -28,7 +28,7 @@
 #
 # For more information, please refer to <http://unlicense.org/>
 
-from distutils.sysconfig import get_python_inc
+from sysconfig import get_paths
 import platform
 import os
 import ycm_core
@@ -57,7 +57,7 @@ flags = [
 '-isystem',
 '../BoostParts',
 '-isystem',
-get_python_inc(),
+get_paths()['include'],
 '-isystem',
 '../llvm/include',
 '-isystem',
