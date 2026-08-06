@@ -64,6 +64,15 @@ RUN git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vund
 RUN cd $HOME/.vim/bundle/YouCompleteMe && \
     python3 install.py --verbose --force-sudo
 
+# ycmd pins jedi 0.19.x (Python <= 3.13); bump vendored jedi/parso for 3.14
+RUN cd $HOME/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/jedi_deps/jedi && \
+    git fetch --tags --no-recurse-submodules origin && \
+    git -c submodule.recurse=false checkout v0.20.0 && \
+    git submodule update --init && \
+    cd ../parso && \
+    git fetch --tags --no-recurse-submodules origin && \
+    git -c submodule.recurse=false checkout v0.8.7
+
 # Install Vim Copilot
 RUN curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh && \
 	bash nodesource_setup.sh && \
