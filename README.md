@@ -132,7 +132,7 @@ vim --version | grep python
 cp .bashrc ~/.bashrc
 cp .bash_aliases ~/.bash_aliases
 cp .vimrc ~/.vimrc
-cp .ycm_extra_conf.py ~/.ycm_extra_conf
+cp .ycm_extra_conf.py ~/.ycm_extra_conf.py
 cp .inputrc ~/.inputrc
 cp .tmux.conf ~/.tmux.conf
 
@@ -149,6 +149,20 @@ python3 install.py --go-completer --rust-completer --ts-completer --verbose
 
 Give a little care about JsCompleter, remove tern
 https://github.com/ycm-core/YouCompleteMe#javascript-and-typescript-semantic-completion
+
+If `gd` on Python code fails with `NotImplementedError: Python version 3.14 is
+currently not supported`: ycmd still bundles jedi 0.19.x (supports up to 3.13).
+Bump the vendored jedi/parso until upstream catches up:
+```bash
+cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/jedi_deps/jedi
+git fetch --tags --no-recurse-submodules origin
+git -c submodule.recurse=false checkout v0.20.0
+git submodule update --init
+cd ../parso
+git fetch --tags --no-recurse-submodules origin
+git -c submodule.recurse=false checkout v0.8.7
+```
+Note: a later `git submodule update` in YCM reverts this; redo if gd breaks again.
 </details>
   
  
