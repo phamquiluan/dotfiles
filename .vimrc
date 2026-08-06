@@ -13,6 +13,8 @@ set clipboard=unnamed " using system clipboard
 set hlsearch
 set incsearch
 set linebreak
+set wrap
+set diffopt+=followwrap " keep wrap enabled in vimdiff
 set foldmethod=indent
 set foldlevel=10
 set ignorecase
@@ -45,8 +47,9 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }  " skipped for now
+Plugin 'Valloric/YouCompleteMe', { 'commit':'d98f896' }
 Plugin 'tpope/vim-surround'
+Plugin 'rickhowe/diffchar.vim' " word-level highlighting in vimdiff
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Vimjas/vim-python-pep8-indent'
@@ -182,7 +185,6 @@ hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black
 if &diff
 	colorscheme desert
 endif
-autocmd VimEnter,WinEnter * if &diff | setlocal wrap linebreak | endif
 
 autocmd FileType python setlocal indentkeys-=<:>
 autocmd FileType python setlocal indentkeys-=:"
