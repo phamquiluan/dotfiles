@@ -1,0 +1,34 @@
+# Publication style for ML venues (NeurIPS/ICLR/ICML), single-column default.
+# Sizes are physical inches; include the PDF in LaTeX WITHOUT width= scaling.
+figure.figsize: 3.25, 2.2
+figure.dpi: 150
+
+savefig.bbox: tight
+savefig.pad_inches: 0.02
+
+font.family: serif
+font.size: 8
+axes.titlesize: 8
+axes.labelsize: 8
+xtick.labelsize: 7
+ytick.labelsize: 7
+legend.fontsize: 7
+legend.frameon: False
+
+axes.spines.top: False
+axes.spines.right: False
+axes.grid: True
+axes.axisbelow: True
+grid.linewidth: 0.4
+grid.alpha: 0.3
+
+lines.linewidth: 1.2
+lines.markersize: 3.5
+errorbar.capsize: 2
+
+# Colorblind-safe palette (Okabe-Ito derived, seaborn "colorblind" order)
+axes.prop_cycle: cycler('color', ['0173B2', 'DE8F05', '029E73', 'D55E00', 'CC78BC', 'CA9161', 'FBAFE4', '949494'])
+
+# Embed TrueType (Type 42) fonts; Type 3 fails camera-ready font checks.
+pdf.fonttype: 42
+ps.fonttype: 42
