@@ -1,1 +1,17 @@
 __pycache__
+.DS_Store
+
+# Anthropic skills auto-synced into ~/.claude/skills (proprietary, "All rights reserved")
+skills/synced/
+
+# Zipped skill bundles (build outputs, regenerable)
+*.skill
+skills/dist/
+
+# Third-party HyperFrames skills (no license shipped; reinstall from source)
+skills/hyperframes*/
+skills/media-use/
+skills/product-launch-video/
+
+# Private: contains cluster account details
+skills/katana/
