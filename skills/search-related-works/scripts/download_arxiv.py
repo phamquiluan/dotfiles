@@ -28,17 +28,17 @@ def _build_ssl_context() -> ssl.SSLContext:
         return ctx
 
 
-def download_paper(arxiv_id: str, output_dir: str, ssl_context: ssl.SSLContext, max_retries: int = 3) -> bool:
+def download_paper(arxiv_id: str, output_dir: str, ssl_context: ssl.SSLContext, max_retries: int = 3) -> str:
     """Download a single arXiv paper as PDF with retry logic.
 
-    Returns True if downloaded, False if skipped (already exists) or failed after retries.
+    Returns "downloaded", "skipped" (already exists), "not_found" (HTTP 404), or "failed".
     """
     filename = f"{arxiv_id}.pdf"
     filepath = os.path.join(output_dir, filename)
 
     if os.path.exists(filepath):
         print(f"Skipped (exists): {filename}")
-        return False
+        return "skipped"
 
     url = f"https://arxiv.org/pdf/{arxiv_id}.pdf"
     # arxiv.org/pdf is an Allowed path (robots.txt Crawl-delay: 15). A descriptive
@@ -57,12 +57,12 @@ def download_paper(arxiv_id: str, output_dir: str, ssl_context: ssl.SSLContext, 
             with open(filepath, "wb") as f:
                 f.write(data)
             print(f"Downloaded: {filename}")
-            return True
+            return "downloaded"
         except urllib.error.HTTPError as e:
             # 404 = no such PDF (e.g. bad/hallucinated ID): don't retry.
             if e.code == 404:
                 print(f"Not found (HTTP 404), skipping: {filename}")
-                return False
+                return "not_found"
             if attempt < max_retries - 1:
                 # 429/503 are often server-wide; back off harder (10s, 20s, 40s).
                 wait_time = (2 ** attempt) * 10 if e.code in (429, 503) else (2 ** attempt) * 5
@@ -70,7 +70,7 @@ def download_paper(arxiv_id: str, output_dir: str, ssl_context: ssl.SSLContext, 
                 time.sleep(wait_time)
             else:
                 print(f"Failed to download {filename} after {max_retries} attempts (HTTP {e.code})")
-                return False
+                return "failed"
         except (urllib.error.URLError, TimeoutError) as e:
             if attempt < max_retries - 1:
                 wait_time = (2 ** attempt) * 5  # Exponential backoff: 5s, 10s, 20s
@@ -78,10 +78,10 @@ def download_paper(arxiv_id: str, output_dir: str, ssl_context: ssl.SSLContext, 
                 time.sleep(wait_time)
             else:
                 print(f"Failed to download {filename} after {max_retries} attempts")
-                return False
+                return "failed"
         except Exception as e:
             print(f"Unexpected error downloading {filename}: {type(e).__name__}: {e}")
-            return False
+            return "failed"
 
 
 def main():
@@ -102,19 +102,21 @@ def main():
 
     ssl_context = _build_ssl_context()
 
-    downloaded = 0
-    failed = 0
+    counts = {"downloaded": 0, "skipped": 0, "not_found": 0, "failed": 0}
     for i, arxiv_id in enumerate(args.arxiv_ids):
-        if download_paper(arxiv_id, args.output_dir, ssl_context):
-            downloaded += 1
-        else:
-            failed += 1
-        if i < len(args.arxiv_ids) - 1:
+        status = download_paper(arxiv_id, args.output_dir, ssl_context)
+        counts[status] += 1
+        # Only pause after a real request; skipped files hit no server
+        if status != "skipped" and i < len(args.arxiv_ids) - 1:
             time.sleep(5)  # Increased delay between downloads to reduce rate limiting
 
-    print(f"\nDone. Downloaded {downloaded}/{len(args.arxiv_ids)} papers to {args.output_dir}")
-    if failed > 0:
-        print(f"Failed to download {failed} papers (check output above for details)")
+    print(f"\nDone. Downloaded {counts['downloaded']}/{len(args.arxiv_ids)} papers to {args.output_dir}")
+    if counts["skipped"]:
+        print(f"Skipped {counts['skipped']} already-downloaded papers")
+    if counts["not_found"]:
+        print(f"Not found on arXiv: {counts['not_found']} (check the IDs)")
+    if counts["failed"]:
+        print(f"Failed to download {counts['failed']} papers (check output above for details)")
 
 
 if __name__ == "__main__":
